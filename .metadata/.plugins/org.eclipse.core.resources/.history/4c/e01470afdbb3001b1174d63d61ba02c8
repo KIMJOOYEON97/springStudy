@@ -1,0 +1,11 @@
+package com.kh.spring.user.model.service;
+
+public interface UserService {
+	
+	private UserService userService;
+	
+	public void getUserDetail(String id) {
+		
+	}
+
+}

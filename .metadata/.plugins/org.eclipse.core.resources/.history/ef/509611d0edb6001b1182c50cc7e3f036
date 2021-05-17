@@ -1,0 +1,6 @@
+package com.kh.spring.demo.model.dao;
+
+public class Snippet {
+	@Controller 어노테이션이 붙은 클래스가 사용자 요청을 처리할 수 있도록함
+}
+
