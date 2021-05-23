@@ -53,3 +53,10 @@ commit;
 		*
 	from
 		member;
+        
+update
+    member
+set
+    password ='$2a$10$mr0ckabmg7HGv9KQsWZZo.SCeucsxy2/kLBhwW80yjKLJTFSAxZAm'
+where
+    id ='admin';

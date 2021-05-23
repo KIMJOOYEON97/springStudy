@@ -46,7 +46,7 @@ ${time}
 		</div>
 		<br />
 		<input type="submit" class="btn btn-outline-success" value="수정" >&nbsp;
-		<input type="reset" class="btn btn-outline-success" value="취소">
+		<input type="reset" class="btn btn-outline-success" value="취소" onclick="updateCancel()">
 	</form>
 </div>
 <script>
@@ -63,6 +63,12 @@ $(document.memberUpdateFrm).submit((e) => {
 	
 	
 });
+
+function updateCancel(){
+
+	location.href=`${pageContext.request.contextPath}/member/updateCancel.do`;
+	
+}
 
 </script>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"></jsp:include>

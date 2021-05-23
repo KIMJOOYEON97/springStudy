@@ -80,6 +80,7 @@ public class DemoController {
 	public String devForm() {
 		log.info("/demo/devForm.do 요청!");
 		//viewResolver빈에 의해서 /WEB-INF/views + demo/devForm + .jsp jsp파일로 위임.
+		
 		return "demo/devForm";
 	}
 	
@@ -214,6 +215,7 @@ public class DemoController {
 		log.info("1234568");
 		//2. jsp위임 
 		model.addAttribute("list",list);
+		
 		
 		return "demo/devList";
 	}

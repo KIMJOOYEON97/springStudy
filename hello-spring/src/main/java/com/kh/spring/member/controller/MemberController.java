@@ -139,7 +139,9 @@ public class MemberController {
 	
 	@GetMapping("/memberLogin.do")
 	public void memberLogin(
+			//next 이전에 요청했던(가려고했던) 페이지
 			@SessionAttribute(required = false) String next,
+			//referer 이번에 요청했던(가려고했던) 페이지 
 			@RequestHeader(name="referer", required=false) String referer, 
 			Model model) {
 		log.info("referer = {}",referer);
@@ -188,10 +190,13 @@ public class MemberController {
 			return "redirect:/member/memberLogin.do";
 		}
 		
-		//사용한 next값은 제거
-		model.addAttribute("next",null);
+		//사용한 next값은 제거 //String next에 referer값이 저장되어있음으로 제거해도 무방
+		model.addAttribute("next",null); 
 		//model은 일종의 map이기 때문에 next라는이름에 값을 null로 만든 것이다
 		//String next랑은 다르다.
+		
+		log.info("next ={}",next); //로그인 전에 있던 페이지.
+		//model의 속성 next가 아니라, 문자열 변수 next에 담긴 값을 출력하니까요
 		
 		return "redirect:"+(next != null? next:"/");
 	}
@@ -213,18 +218,41 @@ public class MemberController {
 	 * 로그인한 사용자 정보 열람하기
 	 */
 	@GetMapping("/memberDetail.do")
-	public ModelAndView memberDetail(ModelAndView mav, @SessionAttribute(name ="loginMember") Member loginMember) {
+	public ModelAndView memberDetail(
+			ModelAndView mav, 
+			@SessionAttribute(name ="loginMember") Member loginMember,
+			
+			//여기서 referer값을 주어야 update취소시 이전 페이지로 넘어갈 수 있다.
+			Model model,
+			@SessionAttribute(required=false) String next, 
+			@RequestHeader(name="referer", required=false) String referer
+			) {
 		//session에 저장된 속성을 꺼내서 볼 수 있다.
 		log.info("loginMember = {}",loginMember);
 		//속성 저장
 		mav.addObject("time",System.currentTimeMillis());
 		//viewName 설정
 		mav.setViewName("member/memberDetail");
+		
+		//update 취소시
+		log.info("next = {}",next); // 이전에 요청했던 페이지 만약 로그인전에 다른 페이지에 있었다면 그 페이지
+		log.info("referer = {}",referer); // 이번에 요청하는 페이지에서 말하는 전에 가고자 했던 페이지
+		//문제는 여기
+		//@SessionAttribute(required=false) String next 이것의 의미를 모르겠다. -> 이전 요청에서 이전에 가고자했던 페이지
+		//if(next == null && referer != null)
+		//next가 null이 나오지 않는 이유는?
+		if(referer != null)
+			 model.addAttribute("next",referer);
+		
 		return mav;
 	}
 	
 	@PostMapping("/memberUpdate.do")
-	public String memberUpdate(Model model, Member member, RedirectAttributes redirectAttr) {
+	public String memberUpdate(
+			Model model, 
+			Member member, 
+			RedirectAttributes redirectAttr) {
+			//@RequestHeader(name="referer", required=false) String referer) { 취소시 원래 페이지로 돌아가는 referer 여기가 아님
 		try {
 			int result = memberService.updateMember(member);
 			redirectAttr.addFlashAttribute("msg","회원정보 수정 성공");
@@ -239,7 +267,21 @@ public class MemberController {
 			throw e;
 		}
 		
+
 		return "redirect:/";
 		
+	}
+	
+	@GetMapping("/updateCancel.do")
+	public String updateCancel(
+			@SessionAttribute(required=false) String next,
+			Model model,
+			RedirectAttributes redirectAttr) {
+		
+			model.addAttribute("next",null);
+			
+			log.info("updateCancel next={}",next);
+		
+			return "redirect:"+(next != null? next:"/");
 	}
 }
