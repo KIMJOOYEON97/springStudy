@@ -6,6 +6,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StopWatch;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -44,6 +45,26 @@ public class LoggerAspect {
 		
 		return returnObj;
 	}
+	
+	
+	
+	@Pointcut("execution(* com.kh.spring.memo..insertMemo(..))")
+	public void loggerTimePointcut() {}
+	
+	@Around("loggerTimePointcut()")
+	public Object loggerTime(ProceedingJoinPoint joinPoint) throws Throwable {
+		Signature signature = joinPoint.getSignature();
+		StopWatch sw = new StopWatch();
+		
+		log.debug("-------------insertMemo 메소드 {} 시작-------------",signature);
+		sw.start();
+		Object returnObj = joinPoint.proceed();
+		sw.stop();
+		log.debug("-------------실행시간 {}밀리초 : insertMemo 메소드 {} -------------",sw.getTotalTimeMillis(),signature);
+		
+		return returnObj;
+	}
+	
 	
 }
 
