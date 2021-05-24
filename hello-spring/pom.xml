@@ -36,13 +36,20 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 				
+		 <!-- #11. aop처리를 위한 aspectjweaver 추가하기 -->
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
-		</dependency>	
-		
+		</dependency>			
+	    <dependency>
+	        <groupId>org.aspectj</groupId>
+	        <artifactId>aspectjweaver</artifactId>
+	        <version>${org.aspectj-version}</version>
+	    </dependency>
+	
+	
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>

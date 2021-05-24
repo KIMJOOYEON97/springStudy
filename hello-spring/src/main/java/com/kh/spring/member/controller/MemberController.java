@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +27,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
+import org.springframework.web.servlet.FlashMap;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.support.RequestContextUtils;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.kh.spring.demo.controller.DemoController;
 import com.kh.spring.member.model.service.MemberService;
@@ -162,8 +167,9 @@ public class MemberController {
 		map.put("str", str);
 		
 		map.put("str", null);
-		log.info("{},{}",str,str ==null);
-		log.info("map = {}",map);
+		log.info("{},{}",str,str ==null); //홍길동, false
+		log.info("map = {}",map); //map = {str=null}
+		//map.put("str", null); 을 주석했을 경우 map = {str=홍길동} 
 		
 		
 		//1. 업무로직
@@ -191,7 +197,7 @@ public class MemberController {
 		}
 		
 		//사용한 next값은 제거 //String next에 referer값이 저장되어있음으로 제거해도 무방
-		model.addAttribute("next",null); 
+		model.addAttribute("next",null); //여기에 담긴 next는 일종의 키값
 		//model은 일종의 map이기 때문에 next라는이름에 값을 null로 만든 것이다
 		//String next랑은 다르다.
 		
@@ -247,7 +253,7 @@ public class MemberController {
 		return mav;
 	}
 	
-	@PostMapping("/memberUpdate.do")
+/*	@PostMapping("/memberUpdate.do")
 	public String memberUpdate(
 			Model model, 
 			Member member, 
@@ -269,6 +275,50 @@ public class MemberController {
 		
 
 		return "redirect:/";
+		
+	}
+*/	
+	
+	@PostMapping("/memberUpdate.do")
+	public ModelAndView memberUpdate(
+			ModelAndView mav, 
+			@ModelAttribute Member member, 
+//			@ModelAttribute("loginMember") Member loginMember, 
+//			RedirectAttributes redirectAttr,
+			HttpServletRequest request) {
+			//@RequestHeader(name="referer", required=false) String referer) { 취소시 원래 페이지로 돌아가는 referer 여기가 아님
+		log.debug("updateMember member= {}",member);
+//		log.debug("updateMember loginmember= {}",loginMember);
+		try {
+			//1. 업무로직
+			int result = memberService.updateMember(member);
+			
+			//2. 사용자 피드백 & 리다이렉트
+//			mav.setViewName("redirect:/member/memberDetail.do");
+			
+			//리다이렉트시 자동생성되는 queryString 방지
+			RedirectView view = new RedirectView(request.getContextPath()+"/member/memberDetail.do");
+			//url관련한 것을 자동으로 붙여주는 속성
+			view.setExposeModelAttributes(false); //이 설정을 할려고 view객체를 사용함
+			mav.setView(view);
+			
+
+			//ModelAndView와 RedirectAttributes 충돌시 FlashMap을 직접 사용
+			FlashMap flashMap = RequestContextUtils.getOutputFlashMap(request);
+			flashMap.put("msg","사용자 정보 수정 성공!!!!!");
+//			redirectAttr.addFlashAttribute("msg","사용자정보 수정 성공");
+			
+
+			mav.addObject("loginMember",member);
+	
+			
+		} catch(Exception e) {
+			log.error("회원정보 수정 오류!",e);
+			throw e;
+		}
+		
+
+		return mav;
 		
 	}
 	

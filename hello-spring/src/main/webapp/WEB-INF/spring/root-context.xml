@@ -10,7 +10,7 @@
 	
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<!-- #7.1. datasource & mybatis 관련 빈 등록 -->
+	<!-- #7.1. datasource & mybatis 관련 빈 등록 접속하고자하는 DB관련 정보를 속성으로 가지고 있음-->
 	<bean class="org.apache.commons.dbcp.BasicDataSource"
 		  id="realDataSource"
 		  destroy-method="close">

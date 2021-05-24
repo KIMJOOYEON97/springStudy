@@ -35,7 +35,9 @@
     	</tr>
 	</c:forEach>
 </table>
-<form name ="hiddenFrm" id="hiddenFrm">
+<form name ="hiddenFrm" id="hiddenFrm"
+	action="${pageContext.request.contextPath}/demo/deleteDev.do" 
+	method="POST">
 	<input id="hidden" type="hidden" name="no"/>
 </form>
 <script>

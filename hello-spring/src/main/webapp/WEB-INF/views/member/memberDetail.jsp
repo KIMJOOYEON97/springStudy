@@ -6,7 +6,9 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%
 	String[] hobby = ((Member) request.getAttribute("loginMember")).getHobby();
-	List<String> hobbyList = Arrays.asList(hobby);
+//hobby가 null일 경우 nullpointexception을 방지하기 위해서
+	List<String> hobbyList =  hobby != null? 
+									Arrays.asList(hobby): null;
 	pageContext.setAttribute("hobbyList", hobbyList);
 
 %>
@@ -28,7 +30,7 @@ ${time}
 		<input type="text" class="form-control" placeholder="주소" name="address" id="address" value="${loginMember.address}"/>
 		<select class="form-control" name="gender" required>
 		  <option value="" disabled selected>성별</option>
-		  <option value="M" ${loginMember.gender =="M"? "selected":"" }>남</option>
+		  <option value="M" ${loginMember.gender eq 'M'? "selected":"" }>남</option>
 		  <option value="F" ${loginMember.gender =="F"? "selected":"" }>여</option>
 		</select>
 		<div class="form-check-inline form-check">

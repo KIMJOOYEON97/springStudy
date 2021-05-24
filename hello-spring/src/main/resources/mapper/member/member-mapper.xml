@@ -49,7 +49,7 @@
 			hobby = #{hobby}
 		where
 			id = #{id}
-<!-- 		<selectKey>
+ 	 	<!-- <selectKey>
 		select
 			*
 		from

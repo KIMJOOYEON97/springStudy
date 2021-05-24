@@ -60,3 +60,22 @@ set
     password ='$2a$10$mr0ckabmg7HGv9KQsWZZo.SCeucsxy2/kLBhwW80yjKLJTFSAxZAm'
 where
     id ='admin';
+
+
+--memo테이블 생성
+create table memo(
+    no number,
+    memo varchar2(2000),
+    reg_date date default sysdate,
+    constraint pk_memo_no primary key(no)
+);
+    
+ create sequence seq_memo_no;   
+ 
+ select * from memo;
+
+commit;
+    
+    
+    
+    
