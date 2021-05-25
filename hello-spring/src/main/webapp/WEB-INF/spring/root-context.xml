@@ -5,12 +5,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
-	<!-- target/classes/datasource.properties  -->
-	<context:property-placeholder location ="classpath:datasource.properties"/>
-	
+	<!-- target/classes/datasource.properties -->
+	<context:property-placeholder location="classpath:datasource.properties"/>
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<!-- #7.1. datasource & mybatis 관련 빈 등록 접속하고자하는 DB관련 정보를 속성으로 가지고 있음-->
+	<!-- #7.1. datasource & mybatis 관련 빈 등록 -->
 	<bean class="org.apache.commons.dbcp.BasicDataSource"
 		  id="realDataSource"
 		  destroy-method="close">
@@ -20,7 +19,7 @@
 		<property name="password" value="${datasource.password}"/>
 	</bean>
 	
-    <!-- #10.1.log4jdbc-remix 관련 dataSource처리  -->
+	<!-- #10.1. log4jdbc-remix 관련 dataSource처리  -->
     <!-- 기존 dataSource빈을 이용해서 proxyDataSource를 만듬 -->
     <bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">  
         <constructor-arg ref="realDataSource" />
@@ -31,7 +30,7 @@
             </bean>
         </property>
     </bean>
-	
+
 	
 	<!-- #7.2. myBatis(JDBC)설정 : SqlSessionFactory -->
 	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -51,8 +50,5 @@
 	<!-- 여러 dao에서 공유하므로 메모리관리에 있어 최적화된 테크닉. -->
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactoryBean"/>
-	</bean>
-	
-	
-	
+	</bean>		
 </beans>
