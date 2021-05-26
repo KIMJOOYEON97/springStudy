@@ -29,8 +29,10 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 			manager.saveOutputFlashMap(flashMap, request, response);
 			
 			//로그인후 최종이동할 url session속성 next 저장
+			//http://localhost:9090/spring/member/memberDetail.do?no=60&q=abc
 			String url = request.getRequestURL().toString();
-			session.setAttribute("next", url); //url로 하면 //http://localhost:9090/spring/member/memberDetail.do 전체가 나옴
+			String queryString = request.getQueryString();
+			session.setAttribute("next", url+"?"+queryString); //url로 하면 //http://localhost:9090/spring/member/memberDetail.do 전체가 나옴
 			//model에서 잘 관리해줌
 			
 			response.sendRedirect(request.getContextPath()+"/member/memberLogin.do");
