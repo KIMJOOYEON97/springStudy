@@ -75,7 +75,33 @@ create table memo(
  select * from memo;
 
 commit;
+
+select * from board order by no desc;
+select * from attachment;
     
+select 
+    *
+from 
+    board b
+    left join
+    attachment a
+        on b.no = a.board_no
+where b.no=60;
     
+select 
+    b.*,
+    a.no "attach_no",
+    a.board_no,
+    a.original_filename,
+    a.renamed_filename,
+    a.upload_date,
+    a.download_count,
+    a.status
+from 
+    board b
+    left join
+    attachment a
+        on b.no = a.board_no
+where b.no= 61;
     
     

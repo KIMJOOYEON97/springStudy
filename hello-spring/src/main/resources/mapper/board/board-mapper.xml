@@ -126,5 +126,22 @@ where b.no=#{no}
 	</collection>
 </resultMap>
 
+<select id="selectOneAttachment" resultMap="attachmentVoMap">
+	select
+		*
+	from
+		attachment
+	where
+		no = #{no}
+</select>
+
+<select id="autocomplete" resultMap="boardExpMap">
+	select
+		*
+	from
+		board
+	where
+		title like '%'||#{search}||'%'
+</select>
 
 </mapper>

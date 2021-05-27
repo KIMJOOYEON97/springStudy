@@ -67,5 +67,19 @@ public class BoardDaoImpl implements BoardDao {
 		// TODO Auto-generated method stub
 		return session.selectOne("board.selectOneBoardCollection",no);
 	}
+
+	@Override
+	public Attachment selectOneAttachment(int no) {
+		// TODO Auto-generated method stub
+		return session.selectOne("board.selectOneAttachment",no);
+	}
+
+	@Override
+	public List<BoardExt> autocomplete(String search) {
+		// TODO Auto-generated method stub
+		return session.selectList("board.autocomplete",search);
+	}
+	
+	
 	
 }

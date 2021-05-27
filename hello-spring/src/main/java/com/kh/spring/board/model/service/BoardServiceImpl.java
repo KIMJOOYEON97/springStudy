@@ -73,6 +73,7 @@ public class BoardServiceImpl implements BoardService {
 		return boardDao.selectOneBoardCollection(no);
 	}
 
+
 	@Override
 	public BoardExt selectOneBoard(int no) {
 		BoardExt board = boardDao.selectOneBoard(no);
@@ -87,4 +88,17 @@ public class BoardServiceImpl implements BoardService {
 		// TODO Auto-generated method stub
 		return boardDao.selectListAttach(no);
 	}
+	
+	@Override
+	public Attachment selectOneAttachment(int no) {
+		// TODO Auto-generated method stub
+		return boardDao.selectOneAttachment(no);
+	}
+
+	@Override
+	public List<BoardExt> autocomplete(String search) {
+		// TODO Auto-generated method stub
+		return boardDao.autocomplete(search);
+	}
+	
 }

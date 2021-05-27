@@ -13,6 +13,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,6 +27,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
@@ -334,4 +338,61 @@ public class MemberController {
 		
 			return "redirect:"+(next != null? next:"/");
 	}
+	
+	/**
+	 * spring ajax(json)
+	 *  * 1. gson - 응답메세지에 json문자열을 직접 출력
+	 * 2. jsonView 빈을 통해 처리하기 - modle에 담긴 데이터를 json으로 변환, 응답에 출력
+	 * 3. @ResponseBody - 리턴된 자바객체를 json으로 변환 응답에 출력 
+	 * 4. ResponseEntity<Map<String,Object>>
+	 * 
+	 * jsonView방식
+	 * 
+	 * @param id
+	 * @return
+	 */
+	@GetMapping("/checkIdDuplicate1.do")
+	public String checkIdDuplicate(@RequestParam String id,Model model) {
+		//1. 업무로직
+		Member member = memberService.selectOneMember(id);
+		boolean available = member== null; //null이어야 available이 true
+		
+		//2. Model에 속성 저장
+		model.addAttribute("available",available);
+		model.addAttribute("id",id);
+		
+		return "jsonView";
+	}
+	
+	@GetMapping("/checkIdDuplicate2.do")
+	@ResponseBody
+	public Map<String, Object> checkIdDuplicate2(@RequestParam String id) {
+		//1. 업무로직
+		Member member = memberService.selectOneMember(id);
+		boolean available = member== null; //null이어야 available이 true
+		
+		//2. Model에 속성 저장
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("available", available);
+		map.put("id", id);
+		
+		return map;
+	}	
+	
+	@GetMapping("/checkIdDuplicate3.do")
+	public ResponseEntity<Map<String,Object>> checkIdDuplicate3(@RequestParam String id) {
+		//1. 업무로직
+		Member member = memberService.selectOneMember(id);
+		boolean available = member== null; //null이어야 available이 true
+		
+		//2. Model에 속성 저장
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("available", available);
+		map.put("id", id);
+		
+		return ResponseEntity
+				.ok()
+				.header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_UTF8_VALUE)
+				.body(map);
+	}	
 }
