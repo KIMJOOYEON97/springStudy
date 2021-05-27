@@ -75,8 +75,8 @@ $(() =>{
 		  		},
 		  		select: function(event, selected){
 			  		//클릭했을때, 해당게시글 상세페이지로 이동
-			  		  console.log(event);
-			  		  console.log(selected);
+			  		  //console.log(event);
+			  		  //console.log(selected);
 			  		  const {item:{value}} = selected;
 			  		  console.log(value);
 			  		  location.href=`${pageContext.request.contextPath}/board/boardDetail.do?no=\${value}`;

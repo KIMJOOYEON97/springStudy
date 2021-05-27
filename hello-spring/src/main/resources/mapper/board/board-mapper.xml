@@ -135,6 +135,7 @@ where b.no=#{no}
 		no = #{no}
 </select>
 
+
 <select id="autocomplete" resultMap="boardExpMap">
 	select
 		*

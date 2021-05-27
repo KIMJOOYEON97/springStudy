@@ -265,7 +265,7 @@ public class BoardController {
 		try {
 			
 			//1.업무로직
-			log.info("autocomplet search ={}",search);
+			//log.info("autocomplet search ={}",search);
 			List<BoardExt> board = boardService.autocomplete(search);
 			log.debug("board={}",board);
 			
