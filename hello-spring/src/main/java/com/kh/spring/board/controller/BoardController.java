@@ -266,6 +266,7 @@ public class BoardController {
 			
 			//1.업무로직
 			//log.info("autocomplet search ={}",search);
+			//board로 해도 상관 없음 Title과 no만 중요함으로
 			List<BoardExt> board = boardService.autocomplete(search);
 			log.debug("board={}",board);
 			

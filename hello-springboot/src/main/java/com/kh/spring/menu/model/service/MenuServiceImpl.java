@@ -44,4 +44,10 @@ public class MenuServiceImpl implements MenuService {
 		// TODO Auto-generated method stub
 		return  menuDao.updateMenu(menu);
 	}
+
+	@Override
+	public int deleteMenu(String id) {
+		// TODO Auto-generated method stub
+		return menuDao.deleteMenu(id);
+	}
 }

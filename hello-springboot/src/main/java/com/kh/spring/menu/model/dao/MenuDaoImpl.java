@@ -49,5 +49,12 @@ public class MenuDaoImpl implements MenuDao {
 		log.debug("menu={}",menu);
 		
 		return  session.update("menu.updateMenu",menu);
+
+	}
+
+	@Override
+	public int deleteMenu(String id) {
+		// TODO Auto-generated method stub
+		return session.update("menu.deleteMenu",id);
 	}
 }

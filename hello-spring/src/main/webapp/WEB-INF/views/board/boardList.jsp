@@ -45,8 +45,27 @@ $(() =>{
 						data: {
 							search :request.term
 						},
-						dataType: 'json',
-						success: (data) =>{
+						//dataType: 'json',
+						//success(data){} =>메소드만 간결하게 이런 식으로 처리 가능
+						//error(xhr,statusText,err){} 
+						
+						success(data){
+							console.log(data);
+							const {board} = data;
+							console.log(board);
+							//배열
+							const arr = 
+								board.map(({no,title}) => ({
+									label: title,
+									value: no,
+									no		
+								}));
+							console.log(arr);
+							response(arr);
+						},
+						
+						
+				/* 		success: (data) =>{
 							console.log(data);
 							const {board} = data;
 							console.log(board);
@@ -62,12 +81,15 @@ $(() =>{
 							//  console.log(arr);
 							  //콜백함수 호출
 							//  response(arr);
+							
+							//jQuery의 map
 							response($.map(board,function(item){
 								return{
 									label:item.title,
 									value:item.no}
 								}))
-							},
+							}, */
+							
 						error:(xhr,statusText,err) => {
 							console.log(xhr,statusText,err);	
 						}
@@ -77,21 +99,27 @@ $(() =>{
 			  		//클릭했을때, 해당게시글 상세페이지로 이동
 			  		  //console.log(event);
 			  		  //console.log(selected);
-			  		  const {item:{value}} = selected;
+			  		  
+			  	 	  const {item:{value}} = selected;
 			  		  console.log(value);
-			  		  location.href=`${pageContext.request.contextPath}/board/boardDetail.do?no=\${value}`;
+			  		  location.href=`${pageContext.request.contextPath}/board/boardDetail.do?no=\${value}`; 
+
+			  		  const {item:{no}} = selected;
+			  		  //location.href="${pageContext.request.contextPath}/board/boardDetail.do?no=" + no;
+			  		  //location.href=`${pageContext.request.contextPath}/board/boardDetail.do?no=\${no}`;
 			  			
 			  	},
 			  	focus: function(event, focused){
 				return false;
-				}
-
-
+				},
+				
+				autoFocus: true, //If set to true the first item will automatically be focused when the menu is shown.
+				minLength: 2 //The minimum number of characters a user must type before a search is performed.
 		});
 });
 </script>
 <section id="board-container" class="container">
-	<input type="search" placeholder="제목 검색..." id="searchTitle" class="form-control col-sm-3 d-inline"/>
+	<input type="search" placeholder="제목 검색..." id="searchTitle" class="form-control col-sm-3 d-inline" autofocus/>
 	<input type="button" value="글쓰기" id="btn-add" class="btn btn-outline-success" onclick="goBoardForm();"/>
 	<table id="tbl-board" class="table table-striped table-hover">
 		<tr>
