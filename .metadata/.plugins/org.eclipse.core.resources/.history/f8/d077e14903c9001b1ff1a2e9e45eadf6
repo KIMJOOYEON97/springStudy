@@ -1,0 +1,28 @@
+package com.kh.interactFunding.funding.model.vo;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@ToString(callSuper = true)
+@AllArgsConstructor
+@NoArgsConstructor
+public class FundingExt extends Funding{
+	//김주연
+	//Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+	@DateTimeFormat(pattern ="yyyy-MM-dd")
+	
+	//대표이미지 번호
+	private int no;
+	private boolean hasAttachment;
+	
+	private List<Attachment> attachList;
+	
+}

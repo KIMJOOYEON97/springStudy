@@ -1,0 +1,9 @@
+DEBUG:[2021-06-10 00:08:51,717] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-10 00:08:51,718] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-10 00:08:54,471] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-10 00:08:54,472] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-10 00:08:55,175] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-10 00:08:55,175] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-10 00:08:55,982] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-10 00:08:55,984] FundingController.java:195 - ready5Reward
+INFO :[2021-06-10 07:55:39,992] ContextLoader.java:270 - Root WebApplicationContext: initialization started

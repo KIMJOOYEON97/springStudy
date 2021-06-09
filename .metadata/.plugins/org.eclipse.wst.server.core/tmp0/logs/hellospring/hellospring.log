@@ -1,0 +1,52 @@
+INFO :[2021-06-05 01:10:37,161] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-05 01:10:39,283] ContextLoader.java:306 - Root WebApplicationContext initialized in 2119 ms
+INFO :[2021-06-05 01:10:39,319] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-05 01:10:41,358] FrameworkServlet.java:546 - Completed initialization in 2039 ms
+DEBUG:[2021-06-05 01:11:05,293] LoggerInterceptor.java:20 - =========================start========================
+DEBUG:[2021-06-05 01:11:05,293] LoggerInterceptor.java:22 - /spring/board/boardList.do
+DEBUG:[2021-06-05 01:11:05,294] LoggerInterceptor.java:23 - ------------------------------------------------------
+DEBUG:[2021-06-05 01:11:05,325] BoardController.java:64 - cpage = 1
+DEBUG:[2021-06-05 01:11:05,817] BoardController.java:76 - totalContents=64 , url= /spring/board/boardList.do
+DEBUG:[2021-06-05 01:11:05,822] LoggerInterceptor.java:36 - ------------------------------------------------------
+DEBUG:[2021-06-05 01:11:05,822] LoggerInterceptor.java:37 - modelAndView =ModelAndView [view="board/boardList"; model={list=[BoardExt(super=Board(no=66, title=미피, memberId=herojoo9170, content=미피볼펜, regDate=Wed May 26 19:07:29 KST 2021, readCount=0), hasAttachment=true, attachList=null), BoardExt(super=Board(no=64, title=ㅁㅍㅇ, memberId=abc1234, content=ㅁㅍㅇ, regDate=Wed May 26 18:09:01 KST 2021, readCount=0), hasAttachment=true, attachList=null), BoardExt(super=Board(no=62, title=안녕하세요, memberId=herojoo9170, content= 안녕하세요, regDate=Wed May 26 17:12:03 KST 2021, readCount=0), hasAttachment=true, attachList=null), BoardExt(super=Board(no=61, title=abc, memberId=young, content=abc, regDate=Wed May 26 16:55:56 KST 2021, readCount=0), hasAttachment=false, attachList=null), BoardExt(super=Board(no=60, title=안녕하세요, 게시판입니다 - 60, memberId=admin, content=안녕하세, regDate=Sun Jun 10 00:00:00 KST 2018, readCount=0), hasAttachment=true, attachList=null), BoardExt(super=Board(no=59, title=안녕하세요, 게시판입니다 - 59, memberId=qwerty, content=반갑습니다, regDate=Sat Jun 09 00:00:00 KST 2018, readCount=0), hasAttachment=true, attachList=null), BoardExt(super=Board(no=58, title=안녕하세요, 게시판입니다 - 58, memberId=abcde, content=안녕하세, regDate=Fri Jun 08 00:00:00 KST 2018, readCount=0), hasAttachment=false, attachList=null), BoardExt(super=Board(no=57, title=안녕하세요, 게시판입니다 - 57, memberId=admin, content=반갑습니다, regDate=Thu Jun 07 00:00:00 KST 2018, readCount=0), hasAttachment=false, attachList=null), BoardExt(super=Board(no=56, title=안녕하세요, 게시판입니다 - 56, memberId=qwerty, content=안녕하세, regDate=Wed Jun 06 00:00:00 KST 2018, readCount=0), hasAttachment=false, attachList=null), BoardExt(super=Board(no=55, title=안녕하세요, 게시판입니다 - 55, memberId=abcde, content=반갑습니다, regDate=Tue Jun 05 00:00:00 KST 2018, readCount=0), hasAttachment=false, attachList=null)], pageBar=<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">  <li class="page-item disabled">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li><li class="page-item active">
+      <a class="page-link" href="#">1<span class="sr-only">(current)</span></a>
+    </li> <li class="page-item"><a class="page-link" href="/spring/board/boardList.do?cpage=2">2</a></li> <li class="page-item"><a class="page-link" href="/spring/board/boardList.do?cpage=3">3</a></li> <li class="page-item"><a class="page-link" href="/spring/board/boardList.do?cpage=4">4</a></li> <li class="page-item"><a class="page-link" href="/spring/board/boardList.do?cpage=5">5</a></li><li class="page-item">
+      <a class="page-link" href="/spring/board/boardList.do?cpage=6" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>  </ul>
+</nav>}]
+DEBUG:[2021-06-05 01:11:06,044] LoggerInterceptor.java:46 - ------------------------view--------------------------
+DEBUG:[2021-06-05 01:11:06,045] LoggerInterceptor.java:48 - ________________________end___________________________
+
+DEBUG:[2021-06-05 01:11:06,084] LoggerInterceptor.java:20 - =========================start========================
+DEBUG:[2021-06-05 01:11:06,084] LoggerInterceptor.java:22 - /spring/resources/images/file.png
+DEBUG:[2021-06-05 01:11:06,084] LoggerInterceptor.java:23 - ------------------------------------------------------
+DEBUG:[2021-06-05 01:11:06,100] LoggerInterceptor.java:36 - ------------------------------------------------------
+DEBUG:[2021-06-05 01:11:06,100] LoggerInterceptor.java:37 - modelAndView =null
+DEBUG:[2021-06-05 01:11:06,101] LoggerInterceptor.java:46 - ------------------------view--------------------------
+DEBUG:[2021-06-05 01:11:06,101] LoggerInterceptor.java:48 - ________________________end___________________________
+
+DEBUG:[2021-06-05 01:11:07,279] LoggerInterceptor.java:20 - =========================start========================
+DEBUG:[2021-06-05 01:11:07,279] LoggerInterceptor.java:22 - /spring/board/boardDetail.do
+DEBUG:[2021-06-05 01:11:07,279] LoggerInterceptor.java:23 - ------------------------------------------------------
+DEBUG:[2021-06-05 01:11:07,280] LoggerInterceptor.java:46 - ------------------------view--------------------------
+DEBUG:[2021-06-05 01:11:07,280] LoggerInterceptor.java:48 - ________________________end___________________________
+
+DEBUG:[2021-06-05 01:11:07,298] LoggerInterceptor.java:20 - =========================start========================
+DEBUG:[2021-06-05 01:11:07,298] LoggerInterceptor.java:22 - /spring/member/memberLogin.do
+DEBUG:[2021-06-05 01:11:07,298] LoggerInterceptor.java:23 - ------------------------------------------------------
+INFO :[2021-06-05 01:11:07,301] MemberController.java:99 - @ModelAttribute("common")
+INFO :[2021-06-05 01:11:07,305] MemberController.java:156 - referer = http://localhost:9090/spring/board/boardList.do
+DEBUG:[2021-06-05 01:11:07,310] LoggerInterceptor.java:36 - ------------------------------------------------------
+DEBUG:[2021-06-05 01:11:07,310] LoggerInterceptor.java:37 - modelAndView =ModelAndView [view="member/memberLogin"; model={msg=로그인 후 사용하실 수 있습니다., next=http://localhost:9090/spring/board/boardDetail.do?no=66, common={adminPhone=070-1234-5678, adminEmail=admin@kh.or.kr}, org.springframework.validation.BindingResult.next=org.springframework.validation.BeanPropertyBindingResult: 0 errors}]
+DEBUG:[2021-06-05 01:11:07,451] LoggerInterceptor.java:46 - ------------------------view--------------------------
+DEBUG:[2021-06-05 01:11:07,451] LoggerInterceptor.java:48 - ________________________end___________________________
+

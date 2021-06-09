@@ -1,0 +1,9 @@
+package com.kh.spring.security.model.service;
+
+import java.util.Collection;
+
+import org.springframework.security.core.GrantedAuthority;
+
+public class SecurityServiceImpl implements SecurityService {
+
+}

@@ -57,7 +57,7 @@ commit;
 update
     member
 set
-    password ='$2a$10$mr0ckabmg7HGv9KQsWZZo.SCeucsxy2/kLBhwW80yjKLJTFSAxZAm'
+    password ='$2a$10$6wLRctSpj6rDSkoDPNdUSeN3mO/lfhAJzD083EZ13sVgT/gPyMeUa'
 where
     id ='admin';
 

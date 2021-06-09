@@ -9,7 +9,7 @@
 <%
 	String[] lang = ((Dev)request.getAttribute("dev")).getLang();
 	List<String> langList = Arrays.asList(lang);
-	pageContext.setAttribute("langList", langList);
+// 	pageContext.setAttribute("langList", langList);
 	
 %>
 <jsp:include page="/WEB-INF/views/common/header.jsp">

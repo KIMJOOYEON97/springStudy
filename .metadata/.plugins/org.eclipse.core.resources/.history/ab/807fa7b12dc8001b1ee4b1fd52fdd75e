@@ -1,0 +1,23 @@
+package com.kh.spring.security.model.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+import com.kh.spring.security.model.dao.SecurityDao;
+
+public class SecurityServiceImpl implements SecurityService {
+
+	@Autowired
+	private SecurityDao securityDao;
+	
+	//security를 authentication-manager에서 얘를 호출해서 사용할 것임
+	//비밀번호 맞니 안맞니는 authentication-manager에서 해줄 것이다.
+	@Override
+	public UserDetails loadUserByUsername(String id) throws UsernameNotFoundException {
+		// id로 DB에 조회
+		UserDetails memberDetails = securityDao.loadUserByUsername(id);
+		return null;
+	}
+
+}

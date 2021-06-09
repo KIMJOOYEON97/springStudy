@@ -6,3 +6,24 @@
 1621241787254	Rename package 'com.kh.spring.demo.mode'
 1621241807933	Delete element
 1621241966172	Rename type 'DemoDapImpl'
+1621324789576	Delete element
+1621324811399	Delete element
+1621328303054	Delete element
+1621328310685	Move file
+1621328313135	Move file
+1621328318587	Delete element
+1621328390690	Rename resource 'sample-mapper.xml'
+1621328405583	Delete element
+1621329381926	Delete element
+1621497431862	Delete element
+1621497479768	Copy package
+1621497495036	Rename package 'com.kh.spring.member.service.copy'
+1621497507201	Rename package 'com.kh.spring.member.modleservice'
+1621497514813	Rename package 'com.kh.spring.member.dao'
+1621497628855	Delete element
+1621501333174	Copy file
+1621501340948	Rename resource 'demo-mapper.xml'
+1621506594804	Delete element
+1621506645556	Delete element
+1621592546666	Rename package 'com.kh.spring.common.intercepor'
+1621592633138	Delete element

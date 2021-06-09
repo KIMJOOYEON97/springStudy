@@ -1,0 +1,1573 @@
+INFO :[2021-06-09 17:43:23,167] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 17:43:25,489] ContextLoader.java:306 - Root WebApplicationContext initialized in 2318 ms
+INFO :[2021-06-09 17:43:25,558] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 17:43:28,408] FrameworkServlet.java:546 - Completed initialization in 2850 ms
+DEBUG:[2021-06-09 17:43:28,640] LoggerInterceptor.java:21 - =================== /interact-funding/resources/css/header.css ===================
+DEBUG:[2021-06-09 17:43:28,640] LoggerInterceptor.java:21 - =================== /interact-funding/resources/css/index.css ===================
+DEBUG:[2021-06-09 17:43:28,640] LoggerInterceptor.java:21 - =================== /interact-funding/resources/css/footer.css ===================
+DEBUG:[2021-06-09 17:43:28,640] LoggerInterceptor.java:21 - =================== /interact-funding/resources/js/jquery-3.6.0.js ===================
+DEBUG:[2021-06-09 17:43:30,425] LoggerInterceptor.java:21 - =================== /interact-funding/funding/fundingStart1 ===================
+DEBUG:[2021-06-09 17:43:30,444] FundingController.java:55 - fundingStart1
+DEBUG:[2021-06-09 17:43:34,442] LoggerInterceptor.java:21 - =================== /interact-funding/funding/fundingStart2 ===================
+DEBUG:[2021-06-09 17:43:34,481] FundingController.java:67 - ready1Funding
+DEBUG:[2021-06-09 17:43:36,628] LoggerInterceptor.java:21 - =================== /interact-funding/funding/fundingStart2 ===================
+DEBUG:[2021-06-09 17:43:36,629] FundingController.java:67 - ready1Funding
+DEBUG:[2021-06-09 17:43:39,171] FundingController.java:69 - result=1
+DEBUG:[2021-06-09 17:43:39,171] FundingController.java:69 - result=1
+DEBUG:[2021-06-09 17:43:39,171] FundingController.java:60 - fundingStart2
+DEBUG:[2021-06-09 17:43:39,172] FundingController.java:61 - funding_no=16
+DEBUG:[2021-06-09 17:43:39,171] FundingController.java:60 - fundingStart2
+DEBUG:[2021-06-09 17:43:39,172] FundingController.java:61 - funding_no=15
+DEBUG:[2021-06-09 17:43:39,255] LoggerInterceptor.java:21 - =================== /interact-funding/resources/image/skycraper.png ===================
+DEBUG:[2021-06-09 17:43:52,786] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:43:52,786] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:44:01,386] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+DEBUG:[2021-06-09 17:44:01,439] FundingController.java:127 - funding = FundingExt(super=Funding(funding_no=0, category_code=null, rate_plan_code=null, writer_no=0, title=관리자, now_amount=0, goal_amount=500000, readCount=0, content=null, early_content=null, start_date=null, d_day=null, reg_date=null, phone=null), hasAttachment=false, attachList=null)
+DEBUG:[2021-06-09 17:44:01,440] FundingController.java:130 - saveDirectory =C:\Users\rojoo\git\interact_funding\src\main\webapp\resources\upload\board
+DEBUG:[2021-06-09 17:44:01,442] FundingController.java:158 - attachList = [Attachment(no=0, funding_no=0, originalFilename=다운로드.png, renamedFilename=20210609_174401441_417.png)]
+ERROR:[2021-06-09 17:44:01,468] FundingController.java:169 - 게시물 등록 오류
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'no' in 'class com.kh.interactFunding.funding.model.vo.FundingExt'
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveBasicInfo(FundingDaoImpl.java:38)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveBasicInfo(FundingServiceImpl.java:40)
+	at com.kh.interactFunding.funding.controller.FundingController.saveBasicInfo(FundingController.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'no' in 'class com.kh.interactFunding.funding.model.vo.FundingExt'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:419)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:164)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:79)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:93)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 49 more
+DEBUG:[2021-06-09 17:51:43,984] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:51:43,984] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:51:53,447] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+DEBUG:[2021-06-09 17:51:53,448] FundingController.java:127 - funding = FundingExt(super=Funding(funding_no=15, category_code=null, rate_plan_code=null, writer_no=0, title=안녕하세요, now_amount=0, goal_amount=500000, readCount=0, content=null, early_content=null, start_date=null, d_day=null, reg_date=null, phone=null), hasAttachment=false, attachList=null)
+DEBUG:[2021-06-09 17:51:53,450] FundingController.java:130 - saveDirectory =C:\Users\rojoo\git\interact_funding\src\main\webapp\resources\upload\board
+DEBUG:[2021-06-09 17:51:53,450] FundingController.java:158 - attachList = [Attachment(no=0, funding_no=0, originalFilename=배경화면.png, renamedFilename=20210609_175153450_586.png)]
+ERROR:[2021-06-09 17:51:53,451] FundingController.java:169 - 게시물 등록 오류
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'no' in 'class com.kh.interactFunding.funding.model.vo.FundingExt'
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveBasicInfo(FundingDaoImpl.java:38)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveBasicInfo(FundingServiceImpl.java:40)
+	at com.kh.interactFunding.funding.controller.FundingController.saveBasicInfo(FundingController.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'no' in 'class com.kh.interactFunding.funding.model.vo.FundingExt'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:419)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:164)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:79)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:93)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 49 more
+DEBUG:[2021-06-09 17:51:59,282] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+DEBUG:[2021-06-09 17:51:59,283] FundingController.java:127 - funding = FundingExt(super=Funding(funding_no=15, category_code=null, rate_plan_code=null, writer_no=0, title=안녕하세요, now_amount=0, goal_amount=500000, readCount=0, content=null, early_content=null, start_date=null, d_day=null, reg_date=null, phone=null), hasAttachment=false, attachList=null)
+DEBUG:[2021-06-09 17:51:59,284] FundingController.java:130 - saveDirectory =C:\Users\rojoo\git\interact_funding\src\main\webapp\resources\upload\board
+DEBUG:[2021-06-09 17:51:59,285] FundingController.java:158 - attachList = [Attachment(no=0, funding_no=0, originalFilename=배경화면.png, renamedFilename=20210609_175159284_557.png)]
+ERROR:[2021-06-09 17:51:59,285] FundingController.java:169 - 게시물 등록 오류
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'no' in 'class com.kh.interactFunding.funding.model.vo.FundingExt'
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:77)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveBasicInfo(FundingDaoImpl.java:38)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveBasicInfo(FundingServiceImpl.java:40)
+	at com.kh.interactFunding.funding.controller.FundingController.saveBasicInfo(FundingController.java:163)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'no' in 'class com.kh.interactFunding.funding.model.vo.FundingExt'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:419)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:164)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:79)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:93)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 49 more
+DEBUG:[2021-06-09 17:52:44,055] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:52:44,056] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:52:44,614] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:52:44,614] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:52:45,163] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:52:45,163] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:52:45,456] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:52:45,456] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:54:08,198] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:54:08,198] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:54:20,182] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 17:54:20,192] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-25]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-25'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 17:56:11,530] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 17:56:17,940] ContextLoader.java:306 - Root WebApplicationContext initialized in 6406 ms
+INFO :[2021-06-09 17:56:18,022] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 17:56:22,230] FrameworkServlet.java:546 - Completed initialization in 4207 ms
+DEBUG:[2021-06-09 17:56:22,322] LoggerInterceptor.java:21 - =================== /interact-funding/funding/fundingStart2 ===================
+DEBUG:[2021-06-09 17:56:22,378] FundingController.java:67 - ready1Funding
+DEBUG:[2021-06-09 17:56:23,713] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:56:23,713] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:56:27,145] FundingController.java:69 - result=1
+DEBUG:[2021-06-09 17:56:27,146] FundingController.java:60 - fundingStart2
+DEBUG:[2021-06-09 17:56:27,146] FundingController.java:61 - funding_no=17
+DEBUG:[2021-06-09 17:56:42,441] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 17:56:42,498] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 2 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]
+Field error in object 'fundingExt' on field 'funding_no': rejected value []; codes [typeMismatch.fundingExt.funding_no,typeMismatch.funding_no,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.funding_no,funding_no]; arguments []; default message [funding_no]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'funding_no'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+DEBUG:[2021-06-09 17:57:29,992] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:57:29,992] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:57:31,764] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:57:31,765] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:58:19,650] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 17:58:19,650] FundingController.java:119 - ready4BasicInfo
+DEBUG:[2021-06-09 17:58:31,385] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 17:58:31,386] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 18:06:31,124] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 18:06:40,649] ContextLoader.java:306 - Root WebApplicationContext initialized in 9521 ms
+INFO :[2021-06-09 18:06:40,724] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 18:06:45,742] FrameworkServlet.java:546 - Completed initialization in 5017 ms
+DEBUG:[2021-06-09 18:06:45,837] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:06:45,856] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 18:06:47,766] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:06:47,766] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 18:07:06,919] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:07:07,010] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 2 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-28]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-28'; nested exception is java.lang.IllegalArgumentException]
+Field error in object 'fundingExt' on field 'funding_no': rejected value []; codes [typeMismatch.fundingExt.funding_no,typeMismatch.funding_no,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.funding_no,funding_no]; arguments []; default message [funding_no]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'funding_no'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+DEBUG:[2021-06-09 18:07:54,200] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:07:54,202] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 2 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-28]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-28'; nested exception is java.lang.IllegalArgumentException]
+Field error in object 'fundingExt' on field 'funding_no': rejected value []; codes [typeMismatch.fundingExt.funding_no,typeMismatch.funding_no,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.funding_no,funding_no]; arguments []; default message [funding_no]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'funding_no'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+DEBUG:[2021-06-09 18:07:57,180] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:07:57,181] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 18:08:08,396] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:08:08,398] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 18:11:30,162] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 18:11:33,025] ContextLoader.java:306 - Root WebApplicationContext initialized in 2858 ms
+INFO :[2021-06-09 18:11:33,106] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 18:11:36,198] FrameworkServlet.java:546 - Completed initialization in 3091 ms
+DEBUG:[2021-06-09 18:11:36,290] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:11:36,311] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 18:11:46,103] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:11:46,194] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 18:13:36,548] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 18:13:40,165] ContextLoader.java:306 - Root WebApplicationContext initialized in 3614 ms
+INFO :[2021-06-09 18:13:40,242] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 18:13:43,671] FrameworkServlet.java:546 - Completed initialization in 3428 ms
+DEBUG:[2021-06-09 18:13:43,824] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:13:43,936] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+DEBUG:[2021-06-09 18:13:46,713] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:13:46,713] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 18:14:02,694] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:14:02,696] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 18:16:11,049] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 18:16:13,153] ContextLoader.java:306 - Root WebApplicationContext initialized in 2101 ms
+INFO :[2021-06-09 18:16:13,229] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 18:16:15,330] FrameworkServlet.java:546 - Completed initialization in 2101 ms
+DEBUG:[2021-06-09 18:16:15,427] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:16:15,446] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 18:16:24,135] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:16:24,224] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 18:17:38,898] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 18:17:41,271] ContextLoader.java:306 - Root WebApplicationContext initialized in 2369 ms
+INFO :[2021-06-09 18:17:41,355] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 18:17:44,153] FrameworkServlet.java:546 - Completed initialization in 2798 ms
+DEBUG:[2021-06-09 18:17:44,288] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:17:44,402] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+DEBUG:[2021-06-09 18:17:46,150] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:17:46,152] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+DEBUG:[2021-06-09 18:17:48,857] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:17:48,858] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 18:18:03,824] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:18:03,826] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-29]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-29'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 18:18:52,596] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 18:18:54,838] ContextLoader.java:306 - Root WebApplicationContext initialized in 2238 ms
+INFO :[2021-06-09 18:18:54,917] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 18:18:57,814] FrameworkServlet.java:546 - Completed initialization in 2897 ms
+DEBUG:[2021-06-09 18:18:57,909] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:18:57,930] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 18:18:59,893] LoggerInterceptor.java:21 - =================== /interact-funding/funding/fundingStart2 ===================
+DEBUG:[2021-06-09 18:18:59,931] FundingController.java:70 - ready1Funding
+DEBUG:[2021-06-09 18:19:00,666] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:19:00,666] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 18:19:04,737] FundingController.java:72 - result=1
+DEBUG:[2021-06-09 18:19:04,738] FundingController.java:63 - fundingStart2
+DEBUG:[2021-06-09 18:19:04,738] FundingController.java:64 - funding_no=18
+DEBUG:[2021-06-09 18:19:14,319] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:19:14,377] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 18:20:19,635] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 18:20:27,049] ContextLoader.java:306 - Root WebApplicationContext initialized in 7411 ms
+INFO :[2021-06-09 18:20:27,127] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 18:20:30,324] FrameworkServlet.java:546 - Completed initialization in 3197 ms
+INFO :[2021-06-09 18:58:04,160] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 18:58:06,718] ContextLoader.java:306 - Root WebApplicationContext initialized in 2554 ms
+INFO :[2021-06-09 18:58:06,790] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 18:58:09,495] FrameworkServlet.java:546 - Completed initialization in 2705 ms
+DEBUG:[2021-06-09 18:58:38,359] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:58:38,377] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 18:58:48,515] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:58:48,612] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+DEBUG:[2021-06-09 18:59:16,559] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 18:59:16,572] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+DEBUG:[2021-06-09 18:59:19,079] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:59:19,080] FundingController.java:122 - ready4BasicInfo
+INFO :[2021-06-09 18:59:45,770] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 18:59:49,302] ContextLoader.java:306 - Root WebApplicationContext initialized in 3529 ms
+INFO :[2021-06-09 18:59:49,379] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 18:59:52,336] FrameworkServlet.java:546 - Completed initialization in 2957 ms
+DEBUG:[2021-06-09 18:59:52,429] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 18:59:52,448] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 19:00:06,552] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 19:00:06,640] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-30]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-30'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 19:01:11,323] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 19:01:14,585] ContextLoader.java:306 - Root WebApplicationContext initialized in 3258 ms
+INFO :[2021-06-09 19:01:14,665] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 19:01:17,363] FrameworkServlet.java:546 - Completed initialization in 2697 ms
+DEBUG:[2021-06-09 19:03:27,266] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 19:03:27,373] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-30]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-30'; nested exception is java.lang.IllegalArgumentException]]
+DEBUG:[2021-06-09 19:03:31,459] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:03:31,460] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 19:03:41,359] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 19:03:41,361] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+DEBUG:[2021-06-09 19:05:28,595] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 19:05:28,596] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+DEBUG:[2021-06-09 19:05:29,743] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:05:29,743] FundingController.java:122 - ready4BasicInfo
+DEBUG:[2021-06-09 19:05:40,421] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+DEBUG:[2021-06-09 19:05:40,442] FundingController.java:130 - funding = FundingExt(super=Funding(funding_no=17, category_code=C7, rate_plan_code=null, writer_no=0, title=인증합니당~, now_amount=0, goal_amount=500000, readCount=0, content=null, early_content=null, start_date=null, d_day=null, reg_date=null, phone=null), no=0, hasAttachment=false, attachList=null)
+DEBUG:[2021-06-09 19:05:40,443] FundingController.java:133 - saveDirectory =C:\Users\rojoo\git\interact_funding\src\main\webapp\resources\upload\board
+DEBUG:[2021-06-09 19:05:40,445] FundingController.java:161 - attachList = [Attachment(no=0, funding_no=0, originalFilename=AUDF.png, renamedFilename=20210609_190540443_228.png)]
+ERROR:[2021-06-09 19:05:45,185] Slf4jSpyLogDelegator.java:120 - 1. PreparedStatement.execute() update
+			funding
+		set
+			
+		where
+			funding_no = 0
+java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:207)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1010)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3576)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3677)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveBasicInfo(FundingDaoImpl.java:38)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveBasicInfo(FundingServiceImpl.java:40)
+	at com.kh.interactFunding.funding.controller.FundingController.saveBasicInfo(FundingController.java:166)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR:[2021-06-09 19:05:45,186] Slf4jSpyLogDelegator.java:139 - 1. PreparedStatement.execute() FAILED! update
+			funding
+		set
+			
+		where
+			funding_no = 0 {FAILED after 408 msec}
+java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:207)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1010)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3576)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3677)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveBasicInfo(FundingDaoImpl.java:38)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveBasicInfo(FundingServiceImpl.java:40)
+	at com.kh.interactFunding.funding.controller.FundingController.saveBasicInfo(FundingController.java:166)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR:[2021-06-09 19:05:45,235] FundingController.java:172 - 게시물 등록 오류
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: update    funding   set       where    funding_no = ?
+### Cause: java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:93)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveBasicInfo(FundingDaoImpl.java:38)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveBasicInfo(FundingServiceImpl.java:40)
+	at com.kh.interactFunding.funding.controller.FundingController.saveBasicInfo(FundingController.java:166)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:207)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1010)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3576)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3677)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 49 more
+INFO :[2021-06-09 19:11:31,621] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 19:11:34,089] ContextLoader.java:306 - Root WebApplicationContext initialized in 2463 ms
+INFO :[2021-06-09 19:11:34,174] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 19:11:42,111] FrameworkServlet.java:546 - Completed initialization in 7936 ms
+DEBUG:[2021-06-09 19:11:42,202] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:11:42,221] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:12:12,536] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 19:12:12,625] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+WARN :[2021-06-09 19:12:22,701] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+DEBUG:[2021-06-09 19:12:51,637] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:12:51,637] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:12:59,996] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 19:12:59,997] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 19:16:19,058] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 19:16:21,191] ContextLoader.java:306 - Root WebApplicationContext initialized in 2129 ms
+INFO :[2021-06-09 19:16:21,271] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 19:16:23,389] FrameworkServlet.java:546 - Completed initialization in 2117 ms
+DEBUG:[2021-06-09 19:16:23,480] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:16:23,499] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:16:32,128] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 19:16:32,222] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-09]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-09'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 19:19:43,133] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 19:19:45,338] ContextLoader.java:306 - Root WebApplicationContext initialized in 2201 ms
+INFO :[2021-06-09 19:19:45,427] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 19:19:47,576] FrameworkServlet.java:546 - Completed initialization in 2148 ms
+DEBUG:[2021-06-09 19:19:47,674] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:19:47,695] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:20:00,978] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 19:20:01,074] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.RequestParam java.util.Date] for value '2021-06-26'; nested exception is java.lang.IllegalArgumentException]
+DEBUG:[2021-06-09 19:22:07,285] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:22:07,285] FundingController.java:123 - ready4BasicInfo
+INFO :[2021-06-09 19:27:17,894] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 19:27:20,739] ContextLoader.java:306 - Root WebApplicationContext initialized in 2841 ms
+INFO :[2021-06-09 19:27:20,830] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 19:27:24,823] FrameworkServlet.java:546 - Completed initialization in 3992 ms
+DEBUG:[2021-06-09 19:27:24,919] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:27:24,940] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:27:40,424] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 19:27:40,519] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.RequestParam java.util.Date] for value '2021-06-20'; nested exception is java.lang.IllegalArgumentException]
+DEBUG:[2021-06-09 19:29:01,019] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+INFO :[2021-06-09 19:29:09,140] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 19:29:11,400] ContextLoader.java:306 - Root WebApplicationContext initialized in 2257 ms
+INFO :[2021-06-09 19:29:11,479] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 19:29:13,628] FrameworkServlet.java:546 - Completed initialization in 2148 ms
+DEBUG:[2021-06-09 19:29:13,726] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:29:13,748] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:29:24,453] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+WARN :[2021-06-09 19:29:24,564] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'fundingExt' on field 'd_day': rejected value [2021-06-30]; codes [typeMismatch.fundingExt.d_day,typeMismatch.d_day,typeMismatch.java.sql.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [fundingExt.d_day,d_day]; arguments []; default message [d_day]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.sql.Date' for property 'd_day'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.format.annotation.DateTimeFormat java.sql.Date] for value '2021-06-30'; nested exception is org.springframework.core.convert.ConverterNotFoundException: No converter found capable of converting from type [java.util.Date] to type [@org.springframework.format.annotation.DateTimeFormat java.sql.Date]]]
+INFO :[2021-06-09 19:34:00,105] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 19:34:02,450] ContextLoader.java:306 - Root WebApplicationContext initialized in 2341 ms
+INFO :[2021-06-09 19:34:02,533] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 19:34:04,687] FrameworkServlet.java:546 - Completed initialization in 2154 ms
+DEBUG:[2021-06-09 19:34:04,783] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:34:04,803] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:34:22,157] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:34:22,157] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:34:32,814] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:34:32,815] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:34:39,426] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:34:39,426] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:35:04,632] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:35:04,632] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:35:11,863] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4BasicInfo ===================
+DEBUG:[2021-06-09 19:35:11,863] FundingController.java:123 - ready4BasicInfo
+DEBUG:[2021-06-09 19:35:29,836] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveBasicInfo ===================
+DEBUG:[2021-06-09 19:35:29,941] FundingController.java:131 - funding = FundingExt(super=Funding(funding_no=17, category_code=C4, rate_plan_code=null, writer_no=0, title=인증합니당~, now_amount=0, goal_amount=500000, readCount=0, content=null, early_content=null, start_date=null, d_day=Fri Jun 25 00:00:00 KST 2021, reg_date=null, phone=null), no=0, hasAttachment=false, attachList=null)
+DEBUG:[2021-06-09 19:35:29,941] FundingController.java:132 - upFiles = org.springframework.web.multipart.commons.CommonsMultipartFile@42c074a1
+DEBUG:[2021-06-09 19:35:29,943] FundingController.java:135 - saveDirectory =C:\Users\rojoo\git\interact_funding\src\main\webapp\resources\upload\board
+DEBUG:[2021-06-09 19:35:29,944] FundingController.java:163 - attachList = [Attachment(no=0, funding_no=0, originalFilename=다운로드.png, renamedFilename=20210609_193529943_106.png)]
+ERROR:[2021-06-09 19:35:34,740] Slf4jSpyLogDelegator.java:120 - 1. PreparedStatement.execute() update
+			funding
+		set
+			
+		where
+			funding_no = 0
+java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:207)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1010)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3576)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3677)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveBasicInfo(FundingDaoImpl.java:38)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveBasicInfo(FundingServiceImpl.java:40)
+	at com.kh.interactFunding.funding.controller.FundingController.saveBasicInfo(FundingController.java:168)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR:[2021-06-09 19:35:34,741] Slf4jSpyLogDelegator.java:139 - 1. PreparedStatement.execute() FAILED! update
+			funding
+		set
+			
+		where
+			funding_no = 0 {FAILED after 406 msec}
+java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:207)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1010)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3576)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3677)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveBasicInfo(FundingDaoImpl.java:38)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveBasicInfo(FundingServiceImpl.java:40)
+	at com.kh.interactFunding.funding.controller.FundingController.saveBasicInfo(FundingController.java:168)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR:[2021-06-09 19:35:34,789] FundingController.java:174 - 게시물 등록 오류
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: update    funding   set       where    funding_no = ?
+### Cause: java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:93)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveBasicInfo(FundingDaoImpl.java:38)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveBasicInfo(FundingServiceImpl.java:40)
+	at com.kh.interactFunding.funding.controller.FundingController.saveBasicInfo(FundingController.java:168)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLSyntaxErrorException: ORA-01747: invalid user.table.column, table.column, or column specification
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:440)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:837)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:191)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:523)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:207)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1010)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1315)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3576)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3677)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 49 more
+DEBUG:[2021-06-09 19:41:39,635] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Story ===================
+DEBUG:[2021-06-09 19:41:39,635] FundingController.java:182 - ready5Story
+DEBUG:[2021-06-09 19:42:08,944] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready3BasicRequire ===================
+DEBUG:[2021-06-09 19:42:08,944] FundingController.java:118 - ready3BasicRequire
+DEBUG:[2021-06-09 19:42:32,172] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready3BasicRequire ===================
+DEBUG:[2021-06-09 19:42:32,173] FundingController.java:118 - ready3BasicRequire
+INFO :[2021-06-09 19:50:06,525] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 19:50:08,782] ContextLoader.java:306 - Root WebApplicationContext initialized in 2253 ms
+INFO :[2021-06-09 19:50:08,868] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 19:50:11,074] FrameworkServlet.java:546 - Completed initialization in 2205 ms
+DEBUG:[2021-06-09 19:50:22,273] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 19:50:22,296] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 19:51:01,865] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 19:51:01,866] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 19:51:05,298] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready3BasicInfo ===================
+DEBUG:[2021-06-09 19:51:05,298] FundingController.java:118 - ready3BasicInfo
+DEBUG:[2021-06-09 20:01:19,882] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready2Charge ===================
+DEBUG:[2021-06-09 20:01:19,882] FundingController.java:98 - ready2Charge
+DEBUG:[2021-06-09 20:01:20,022] LoggerInterceptor.java:21 - =================== /interact-funding/resources/image/checked.png ===================
+WARN :[2021-06-09 20:01:24,955] DispatcherServlet.java:1248 - No mapping for GET /interact-funding/funding/ready6Reward
+WARN :[2021-06-09 20:01:45,617] DispatcherServlet.java:1248 - No mapping for GET /interact-funding/funding/ready6Reward
+WARN :[2021-06-09 20:01:46,294] DispatcherServlet.java:1248 - No mapping for GET /interact-funding/funding/ready6Reward
+DEBUG:[2021-06-09 20:01:47,801] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready2Charge ===================
+DEBUG:[2021-06-09 20:01:47,802] FundingController.java:98 - ready2Charge
+DEBUG:[2021-06-09 20:01:50,537] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 20:01:50,537] FundingController.java:181 - ready5Reward
+DEBUG:[2021-06-09 20:01:54,177] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:01:54,178] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:05:28,985] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:05:28,986] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:07:47,956] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:07:47,956] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:08:17,404] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:08:17,405] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:11:54,889] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:11:54,890] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:16:04,787] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:16:04,788] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:17:43,594] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:17:43,594] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:17:44,441] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:17:44,442] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:17:44,678] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:17:44,678] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:18:24,622] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:18:24,623] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:20:03,339] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:20:03,339] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:20:32,635] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:20:32,635] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:23:05,168] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:23:05,168] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:25:39,922] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:25:39,923] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:27:38,995] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:27:38,995] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:28:29,653] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:28:29,654] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:28:52,913] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:28:52,913] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:29:19,051] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:29:19,051] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 20:41:44,438] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 20:41:44,438] FundingController.java:177 - ready4Story
+INFO :[2021-06-09 21:08:24,646] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 21:08:27,107] ContextLoader.java:306 - Root WebApplicationContext initialized in 2458 ms
+INFO :[2021-06-09 21:08:27,191] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 21:08:29,545] FrameworkServlet.java:546 - Completed initialization in 2353 ms
+DEBUG:[2021-06-09 21:08:29,653] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:08:29,675] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:09:06,642] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:09:06,724] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=null, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:09:06,734] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:09:06,735] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:09:30,581] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:09:30,581] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:09:41,142] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:09:41,143] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=null, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:09:41,148] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:09:41,148] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:12:01,668] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:12:01,669] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:12:18,362] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:12:18,365] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=null, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:12:18,370] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:12:18,370] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:14:35,188] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:14:35,188] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:14:36,930] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:14:36,930] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:14:49,667] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+WARN :[2021-06-09 21:14:49,683] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'funding' on field 'start_date': rejected value [2021-06-24]; codes [typeMismatch.funding.start_date,typeMismatch.start_date,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [funding.start_date,start_date]; arguments []; default message [start_date]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'start_date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2021-06-24'; nested exception is java.lang.IllegalArgumentException]]
+INFO :[2021-06-09 21:15:42,436] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 21:15:45,064] ContextLoader.java:306 - Root WebApplicationContext initialized in 2624 ms
+INFO :[2021-06-09 21:15:45,138] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 21:15:48,775] FrameworkServlet.java:546 - Completed initialization in 3637 ms
+DEBUG:[2021-06-09 21:15:48,871] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:15:48,892] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:16:06,007] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:16:06,096] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Fri Jun 25 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:16:06,107] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:16:06,107] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:18:14,449] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:18:14,449] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:18:16,259] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:18:16,260] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:18:32,957] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:18:32,958] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Tue Jun 29 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:18:32,981] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:18:32,981] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:18:52,586] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:18:52,587] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:19:03,801] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:19:03,803] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Sun Jun 13 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:19:03,807] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:19:03,807] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:20:04,027] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:20:04,027] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:20:05,507] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:20:05,507] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:20:29,781] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:20:29,782] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Wed Jun 09 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:20:29,786] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:20:29,786] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:21:56,046] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:21:56,047] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:21:57,683] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:21:57,683] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:23:25,757] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:23:25,757] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:23:31,330] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:23:31,331] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:24:19,116] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:24:19,118] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=<p>aaaaaaaaaaaaaa</p>, early_content=<p>aaaaaaaaaaaaaaaa</p>, start_date=Wed Jun 09 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:24:19,122] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:24:19,122] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:25:03,222] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:25:03,223] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:25:13,973] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:25:13,975] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Thu Jun 17 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:25:13,979] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:25:13,979] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:26:40,291] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:26:40,292] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:26:42,910] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:26:42,911] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:26:53,279] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:26:53,282] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=<p>※ 항목별로 미리 기재되어 있는 내용은 메이커님이 필수 항목을 쉽게 작성하실 수 있도록 돕는 가이드 문구이므로, 참고 후 삭제 부탁드립니다.</p><h2>리워드 핵심 포인트 및 소개</h2><p>도입부에 리워드의 매력 포인트와 차별점을 3줄로 정리하여 서포터분들에게 소개해 주세요.</p><p><br></p><p>(예시)</p><ul><li>리워드의 장점은 무엇인가요?</li><li>와디즈에서만 제공되는 혜택은 무엇인가요?</li><li>어떤 서포터분들을 위한 리워드인가요?</li></ul><p><br></p><p>이어서 리워드의 상세 정보를 안내해 주세요.</p><p>리워드의 이름은 무엇이고, 어떤 용도로 사용하는 제품/서비스인가요? 서포터분들은 리워드를 직접 보고 펀딩할 수 없으므로 사진, 영상과 같은 다양한 시각 자료를 삽입해 주세요.</p><p>리워드 품목에 따라 서포터분들이 꼭 알아야 하는 상세 스펙(특징, 사양, 사이즈, 사용법, 주의 사항 등)을 빠짐없이 알려 주세요.</p><h2>메이커 소개</h2><p>서포터분들과 직접 소통하듯, 친근한 인사말과 함께 메이커님을 소개해 주세요. 오랜 기간 리워드를 기다리는 서포터분들에게 신뢰를 줄 수 있도록 메이커님/팀원들의 모습이 잘 드러나는 사진을 함께 삽입해 주세요.</p><h2>와디즈 펀딩 이유</h2><p>와디즈 펀딩 진행 이유와 펀딩금 사용 계획을 작성해 주세요. 이는 서포터분들의 지지와 관심, 펀딩으로 이어지도록 하는 중요한 내용입니다.</p><ul><li>와디즈에서 크라우드펀딩을 진행하는 이유는 무엇인가요?</li><li>펀딩금은 어떻게 사용하실 계획인가요?</li></ul><p>※ 펀딩금을 기부나 후원과 같이 의미 있는 곳에 사용하실 계획이라면, 서포터분들에게 펀딩금 사용 현황/내역을 공유할 수 있는 방법을 함께 안내해 주세요. (예: 프로젝트 종료 후 새소식을 통해 공지)</p><h2>리워드 리스트</h2><p>리워드의 명칭과 구성, 금액, 혜택을 한눈에 확인할 수 있도록 리스트를 삽입해 주세요. 아래와 같이 테이블 기능을 활용하여 표 형식으로 정리해도 좋습니다.</p><p>※ 반드시 <strong><u>펀딩 준비 &gt; 리워드 설계</u></strong> 화면의 리워드명, 구성, 혜택, 순서와 일치할 수 있도록 확인해 주세요.</p><p><br>(예시)</p><table style="width: 100%;"><thead><tr><th style="text-align: center;">리워드명</th><th style="text-align: center;">구성</th><th style="text-align: center;">금액</th><th style="text-align: center;">혜택</th></tr></thead><tbody><tr><td style="width: 25.0000%;">[울트라얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개, 코스터 1개</td><td style="width: 25%; text-align: center;">21,000원</td><td style="width: 25.0000%;">30% 가격 혜택 + 무료 배송</td></tr><tr><td style="width: 25.0000%;">[커플얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 2개, 코스터 2개</td><td style="width: 25%; text-align: center;">45,000원</td><td style="width: 25.0000%;">25% 가격 혜택 + 무료 배송</td></tr><tr><td style="width: 25.0000%;">[슈퍼얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개, 코스터 1개</td><td style="width: 25%; text-align: center;">24,000원</td><td style="width: 25.0000%;">20% 가격 혜택</td></tr><tr><td style="width: 25.0000%;">[얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개</td><td style="width: 25%; text-align: center;">25,500원</td><td style="width: 25.0000%;">15% 가격 혜택</td></tr></tbody></table><h2>리워드 발송 정보</h2><p>발송 정보는 서포터분들이 궁금해하는 항목이므로 아래 내용을 상세히 작성해 주세요.</p><ul><li>발송 방법: 택배, 우편, 이메일 발송 등</li><li>발송 일정: ○월 ○일 발송 시작</li><li>도서/산간 지역 발송 안내<br>- 도서/산간 지역 배송 가능 여부:<br>- 추가 배송비:<br>- 지불 방법: 다음 세 가지 방법 중 한 가지를 선택해 주세요.<br>1) 펀딩 시 후원금 더하기에 추가 배송비를 입력해 주세요.<br>2) 펀딩 시 도서/산간 추가 배송비 리워드를 함께 펀딩해 주세요. (단, 펀딩 준비 &gt; 리워드 설계 화면에서 추가 배송비 리워드 별도 생성 필수)<br>3) 최종 결제일 이후 서포터분들에게 개별 안내해 드리는 계좌로 추가 배송비를 직접 입금해 주세요.</li><li>배송 시 포장 상태:</li><li>문의 채널과 문의 가능한 시간: 카카오 채널, 메이커에게 문의하기, 메일, 전화번호 등</li><li>수령 후 보관 시 유의 사항:</li></ul><p><br></p> <p></p><p><br></p>, early_content=<p>※ 항목별로 미리 기재되어 있는 내용은 메이커님이 필수 항목을 쉽게 작성하실 수 있도록 돕는 가이드 문구이므로, 참고 후 삭제 부탁드립니다.</p><h2>리워드 핵심 포인트 및 소개</h2><p>도입부에 리워드의 매력 포인트와 차별점을 3줄로 정리하여 서포터분들에게 소개해 주세요.</p><p><br></p><p>(예시)</p><ul><li>리워드의 장점은 무엇인가요?</li><li>와디즈에서만 제공되는 혜택은 무엇인가요?</li><li>어떤 서포터분들을 위한 리워드인가요?</li></ul><p><br></p><p>이어서 리워드의 상세 정보를 안내해 주세요.</p><p>리워드의 이름은 무엇이고, 어떤 용도로 사용하는 제품/서비스인가요? 서포터분들은 리워드를 직접 보고 펀딩할 수 없으므로 사진, 영상과 같은 다양한 시각 자료를 삽입해 주세요.</p><p>리워드 품목에 따라 서포터분들이 꼭 알아야 하는 상세 스펙(특징, 사양, 사이즈, 사용법, 주의 사항 등)을 빠짐없이 알려 주세요.</p><h2>메이커 소개</h2><p>서포터분들과 직접 소통하듯, 친근한 인사말과 함께 메이커님을 소개해 주세요. 오랜 기간 리워드를 기다리는 서포터분들에게 신뢰를 줄 수 있도록 메이커님/팀원들의 모습이 잘 드러나는 사진을 함께 삽입해 주세요.</p><h2>와디즈 펀딩 이유</h2><p>와디즈 펀딩 진행 이유와 펀딩금 사용 계획을 작성해 주세요. 이는 서포터분들의 지지와 관심, 펀딩으로 이어지도록 하는 중요한 내용입니다.</p><ul><li>와디즈에서 크라우드펀딩을 진행하는 이유는 무엇인가요?</li><li>펀딩금은 어떻게 사용하실 계획인가요?</li></ul><p>※ 펀딩금을 기부나 후원과 같이 의미 있는 곳에 사용하실 계획이라면, 서포터분들에게 펀딩금 사용 현황/내역을 공유할 수 있는 방법을 함께 안내해 주세요. (예: 프로젝트 종료 후 새소식을 통해 공지)</p><h2>리워드 리스트</h2><p>리워드의 명칭과 구성, 금액, 혜택을 한눈에 확인할 수 있도록 리스트를 삽입해 주세요. 아래와 같이 테이블 기능을 활용하여 표 형식으로 정리해도 좋습니다.</p><p>※ 반드시 <strong><u>펀딩 준비 &gt; 리워드 설계</u></strong> 화면의 리워드명, 구성, 혜택, 순서와 일치할 수 있도록 확인해 주세요.</p><p><br>(예시)</p><table style="width: 100%;"><thead><tr><th style="text-align: center;">리워드명</th><th style="text-align: center;">구성</th><th style="text-align: center;">금액</th><th style="text-align: center;">혜택</th></tr></thead><tbody><tr><td style="width: 25.0000%;">[울트라얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개, 코스터 1개</td><td style="width: 25%; text-align: center;">21,000원</td><td style="width: 25.0000%;">30% 가격 혜택 + 무료 배송</td></tr><tr><td style="width: 25.0000%;">[커플얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 2개, 코스터 2개</td><td style="width: 25%; text-align: center;">45,000원</td><td style="width: 25.0000%;">25% 가격 혜택 + 무료 배송</td></tr><tr><td style="width: 25.0000%;">[슈퍼얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개, 코스터 1개</td><td style="width: 25%; text-align: center;">24,000원</td><td style="width: 25.0000%;">20% 가격 혜택</td></tr><tr><td style="width: 25.0000%;">[얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개</td><td style="width: 25%; text-align: center;">25,500원</td><td style="width: 25.0000%;">15% 가격 혜택</td></tr></tbody></table><h2>리워드 발송 정보</h2><p>발송 정보는 서포터분들이 궁금해하는 항목이므로 아래 내용을 상세히 작성해 주세요.</p><ul><li>발송 방법: 택배, 우편, 이메일 발송 등</li><li>발송 일정: ○월 ○일 발송 시작</li><li>도서/산간 지역 발송 안내<br>- 도서/산간 지역 배송 가능 여부:<br>- 추가 배송비:<br>- 지불 방법: 다음 세 가지 방법 중 한 가지를 선택해 주세요.<br>1) 펀딩 시 후원금 더하기에 추가 배송비를 입력해 주세요.<br>2) 펀딩 시 도서/산간 추가 배송비 리워드를 함께 펀딩해 주세요. (단, 펀딩 준비 &gt; 리워드 설계 화면에서 추가 배송비 리워드 별도 생성 필수)<br>3) 최종 결제일 이후 서포터분들에게 개별 안내해 드리는 계좌로 추가 배송비를 직접 입금해 주세요.</li><li>배송 시 포장 상태:</li><li>문의 채널과 문의 가능한 시간: 카카오 채널, 메이커에게 문의하기, 메일, 전화번호 등</li><li>수령 후 보관 시 유의 사항:</li></ul><p><br></p> <p></p><p><br></p>, start_date=Tue Jun 15 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:26:53,286] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:26:53,286] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:27:54,299] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:27:54,299] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:27:59,799] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:27:59,800] FundingController.java:181 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Wed Jun 09 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:27:59,803] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:27:59,803] FundingController.java:93 - ready1Funding
+INFO :[2021-06-09 21:47:34,230] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 21:47:37,224] ContextLoader.java:306 - Root WebApplicationContext initialized in 2990 ms
+INFO :[2021-06-09 21:47:37,305] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 21:47:40,166] FrameworkServlet.java:546 - Completed initialization in 2861 ms
+DEBUG:[2021-06-09 21:47:40,259] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:47:40,280] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:47:42,591] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:47:42,591] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:47:57,061] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+ERROR:[2021-06-09 21:47:57,148] FundingController.java:183 - 스토리 등록 오류 스토리 내용 누락
+DEBUG:[2021-06-09 21:51:41,920] LoggerInterceptor.java:21 - =================== /interact-funding/funding/fundingStart1 ===================
+DEBUG:[2021-06-09 21:51:41,920] FundingController.java:59 - fundingStart1
+DEBUG:[2021-06-09 21:51:54,125] LoggerInterceptor.java:21 - =================== /interact-funding/funding/fundingStart2 ===================
+DEBUG:[2021-06-09 21:51:54,126] FundingController.java:71 - ready1Funding
+DEBUG:[2021-06-09 21:51:59,050] FundingController.java:73 - result=1
+DEBUG:[2021-06-09 21:51:59,050] FundingController.java:64 - fundingStart2
+DEBUG:[2021-06-09 21:51:59,050] FundingController.java:65 - funding_no=19
+DEBUG:[2021-06-09 21:54:26,165] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:54:26,165] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:54:33,612] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+ERROR:[2021-06-09 21:54:33,614] FundingController.java:183 - 스토리 등록 오류 스토리 내용 누락
+INFO :[2021-06-09 21:55:31,652] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 21:55:33,963] ContextLoader.java:306 - Root WebApplicationContext initialized in 2307 ms
+INFO :[2021-06-09 21:55:34,045] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 21:55:36,419] FrameworkServlet.java:546 - Completed initialization in 2374 ms
+DEBUG:[2021-06-09 21:55:39,427] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:55:39,537] FundingController.java:183 - 스토리 등록 오류 스토리 내용 누락
+DEBUG:[2021-06-09 21:55:43,408] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:55:43,409] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:55:55,190] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:55:55,192] FundingController.java:183 - 스토리 등록 오류 스토리 내용 누락
+INFO :[2021-06-09 21:58:39,414] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 21:58:42,057] ContextLoader.java:306 - Root WebApplicationContext initialized in 2638 ms
+INFO :[2021-06-09 21:58:42,142] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 21:58:44,982] FrameworkServlet.java:546 - Completed initialization in 2840 ms
+DEBUG:[2021-06-09 21:58:45,080] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:58:45,101] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:59:01,298] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:59:01,405] FundingController.java:183 - 스토리 등록 오류 스토리 내용 누락
+DEBUG:[2021-06-09 21:59:01,408] FundingController.java:188 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Wed Jun 16 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:59:01,418] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:59:01,419] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 21:59:20,714] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 21:59:20,714] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 21:59:25,922] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 21:59:25,924] FundingController.java:183 - 스토리 등록 오류 스토리 내용 누락
+DEBUG:[2021-06-09 21:59:25,924] FundingController.java:188 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Fri Jun 25 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 21:59:25,928] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 21:59:25,928] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 22:02:04,913] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 22:02:04,913] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 22:02:06,545] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 22:02:06,545] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 22:02:17,823] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 22:02:17,824] FundingController.java:183 - 스토리 등록 오류 스토리 내용 누락
+DEBUG:[2021-06-09 22:02:17,824] FundingController.java:188 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Wed Jun 23 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 22:02:17,827] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 22:02:17,828] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 22:03:11,568] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 22:03:11,568] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 22:03:20,358] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 22:03:20,360] FundingController.java:183 - 스토리 등록 오류 스토리 내용 누락
+DEBUG:[2021-06-09 22:03:20,360] FundingController.java:188 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Mon Jun 28 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 22:03:20,365] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 22:03:20,366] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 22:05:21,758] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 22:05:21,759] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 22:05:48,680] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 22:05:48,682] FundingController.java:183 - 스토리 등록 오류 스토리 내용 누락
+DEBUG:[2021-06-09 22:05:48,682] FundingController.java:188 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=, early_content=, start_date=Wed Jun 09 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 22:05:48,686] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 22:05:48,686] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 22:06:37,618] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 22:06:37,619] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 22:06:56,407] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 22:06:56,410] FundingController.java:188 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=<p>※ 항목별로 미리 기재되어 있는 내용은 메이커님이 필수 항목을 쉽게 작성하실 수 있도록 돕는 가이드 문구이므로, 참고 후 삭제 부탁드립니다.</p><h2>리워드 핵심 포인트 및 소개</h2><p>도입부에 리워드의 매력 포인트와 차별점을 3줄로 정리하여 서포터분들에게 소개해 주세요.</p><p><br></p><p>(예시)</p><ul><li>리워드의 장점은 무엇인가요?</li><li>와디즈에서만 제공되는 혜택은 무엇인가요?</li><li>어떤 서포터분들을 위한 리워드인가요?</li></ul><p><br></p><p>이어서 리워드의 상세 정보를 안내해 주세요.</p><p>리워드의 이름은 무엇이고, 어떤 용도로 사용하는 제품/서비스인가요? 서포터분들은 리워드를 직접 보고 펀딩할 수 없으므로 사진, 영상과 같은 다양한 시각 자료를 삽입해 주세요.</p><p>리워드 품목에 따라 서포터분들이 꼭 알아야 하는 상세 스펙(특징, 사양, 사이즈, 사용법, 주의 사항 등)을 빠짐없이 알려 주세요.</p><h2>메이커 소개</h2><p>서포터분들과 직접 소통하듯, 친근한 인사말과 함께 메이커님을 소개해 주세요. 오랜 기간 리워드를 기다리는 서포터분들에게 신뢰를 줄 수 있도록 메이커님/팀원들의 모습이 잘 드러나는 사진을 함께 삽입해 주세요.</p><h2>와디즈 펀딩 이유</h2><p>와디즈 펀딩 진행 이유와 펀딩금 사용 계획을 작성해 주세요. 이는 서포터분들의 지지와 관심, 펀딩으로 이어지도록 하는 중요한 내용입니다.</p><ul><li>와디즈에서 크라우드펀딩을 진행하는 이유는 무엇인가요?</li><li>펀딩금은 어떻게 사용하실 계획인가요?</li></ul><p>※ 펀딩금을 기부나 후원과 같이 의미 있는 곳에 사용하실 계획이라면, 서포터분들에게 펀딩금 사용 현황/내역을 공유할 수 있는 방법을 함께 안내해 주세요. (예: 프로젝트 종료 후 새소식을 통해 공지)</p><h2>리워드 리스트</h2><p>리워드의 명칭과 구성, 금액, 혜택을 한눈에 확인할 수 있도록 리스트를 삽입해 주세요. 아래와 같이 테이블 기능을 활용하여 표 형식으로 정리해도 좋습니다.</p><p>※ 반드시 <strong><u>펀딩 준비 &gt; 리워드 설계</u></strong> 화면의 리워드명, 구성, 혜택, 순서와 일치할 수 있도록 확인해 주세요.</p><p><br>(예시)</p><table style="width: 100%;"><thead><tr><th style="text-align: center;">리워드명</th><th style="text-align: center;">구성</th><th style="text-align: center;">금액</th><th style="text-align: center;">혜택</th></tr></thead><tbody><tr><td style="width: 25.0000%;">[울트라얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개, 코스터 1개</td><td style="width: 25%; text-align: center;">21,000원</td><td style="width: 25.0000%;">30% 가격 혜택 + 무료 배송</td></tr><tr><td style="width: 25.0000%;">[커플얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 2개, 코스터 2개</td><td style="width: 25%; text-align: center;">45,000원</td><td style="width: 25.0000%;">25% 가격 혜택 + 무료 배송</td></tr><tr><td style="width: 25.0000%;">[슈퍼얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개, 코스터 1개</td><td style="width: 25%; text-align: center;">24,000원</td><td style="width: 25.0000%;">20% 가격 혜택</td></tr><tr><td style="width: 25.0000%;">[얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개</td><td style="width: 25%; text-align: center;">25,500원</td><td style="width: 25.0000%;">15% 가격 혜택</td></tr></tbody></table><h2>리워드 발송 정보</h2><p>발송 정보는 서포터분들이 궁금해하는 항목이므로 아래 내용을 상세히 작성해 주세요.</p><ul><li>발송 방법: 택배, 우편, 이메일 발송 등</li><li>발송 일정: ○월 ○일 발송 시작</li><li>도서/산간 지역 발송 안내<br>- 도서/산간 지역 배송 가능 여부:<br>- 추가 배송비:<br>- 지불 방법: 다음 세 가지 방법 중 한 가지를 선택해 주세요.<br>1) 펀딩 시 후원금 더하기에 추가 배송비를 입력해 주세요.<br>2) 펀딩 시 도서/산간 추가 배송비 리워드를 함께 펀딩해 주세요. (단, 펀딩 준비 &gt; 리워드 설계 화면에서 추가 배송비 리워드 별도 생성 필수)<br>3) 최종 결제일 이후 서포터분들에게 개별 안내해 드리는 계좌로 추가 배송비를 직접 입금해 주세요.</li><li>배송 시 포장 상태:</li><li>문의 채널과 문의 가능한 시간: 카카오 채널, 메이커에게 문의하기, 메일, 전화번호 등</li><li>수령 후 보관 시 유의 사항:</li></ul><p><br></p> <p></p><p><br></p>, early_content=<p>※ 항목별로 미리 기재되어 있는 내용은 메이커님이 필수 항목을 쉽게 작성하실 수 있도록 돕는 가이드 문구이므로, 참고 후 삭제 부탁드립니다.</p><h2>리워드 핵심 포인트 및 소개</h2><p>도입부에 리워드의 매력 포인트와 차별점을 3줄로 정리하여 서포터분들에게 소개해 주세요.</p><p><br></p><p>(예시)</p><ul><li>리워드의 장점은 무엇인가요?</li><li>와디즈에서만 제공되는 혜택은 무엇인가요?</li><li>어떤 서포터분들을 위한 리워드인가요?</li></ul><p><br></p><p>이어서 리워드의 상세 정보를 안내해 주세요.</p><p>리워드의 이름은 무엇이고, 어떤 용도로 사용하는 제품/서비스인가요? 서포터분들은 리워드를 직접 보고 펀딩할 수 없으므로 사진, 영상과 같은 다양한 시각 자료를 삽입해 주세요.</p><p>리워드 품목에 따라 서포터분들이 꼭 알아야 하는 상세 스펙(특징, 사양, 사이즈, 사용법, 주의 사항 등)을 빠짐없이 알려 주세요.</p><h2>메이커 소개</h2><p>서포터분들과 직접 소통하듯, 친근한 인사말과 함께 메이커님을 소개해 주세요. 오랜 기간 리워드를 기다리는 서포터분들에게 신뢰를 줄 수 있도록 메이커님/팀원들의 모습이 잘 드러나는 사진을 함께 삽입해 주세요.</p><h2>와디즈 펀딩 이유</h2><p>와디즈 펀딩 진행 이유와 펀딩금 사용 계획을 작성해 주세요. 이는 서포터분들의 지지와 관심, 펀딩으로 이어지도록 하는 중요한 내용입니다.</p><ul><li>와디즈에서 크라우드펀딩을 진행하는 이유는 무엇인가요?</li><li>펀딩금은 어떻게 사용하실 계획인가요?</li></ul><p>※ 펀딩금을 기부나 후원과 같이 의미 있는 곳에 사용하실 계획이라면, 서포터분들에게 펀딩금 사용 현황/내역을 공유할 수 있는 방법을 함께 안내해 주세요. (예: 프로젝트 종료 후 새소식을 통해 공지)</p><h2>리워드 리스트</h2><p>리워드의 명칭과 구성, 금액, 혜택을 한눈에 확인할 수 있도록 리스트를 삽입해 주세요. 아래와 같이 테이블 기능을 활용하여 표 형식으로 정리해도 좋습니다.</p><p>※ 반드시 <strong><u>펀딩 준비 &gt; 리워드 설계</u></strong> 화면의 리워드명, 구성, 혜택, 순서와 일치할 수 있도록 확인해 주세요.</p><p><br>(예시)</p><table style="width: 100%;"><thead><tr><th style="text-align: center;">리워드명</th><th style="text-align: center;">구성</th><th style="text-align: center;">금액</th><th style="text-align: center;">혜택</th></tr></thead><tbody><tr><td style="width: 25.0000%;">[울트라얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개, 코스터 1개</td><td style="width: 25%; text-align: center;">21,000원</td><td style="width: 25.0000%;">30% 가격 혜택 + 무료 배송</td></tr><tr><td style="width: 25.0000%;">[커플얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 2개, 코스터 2개</td><td style="width: 25%; text-align: center;">45,000원</td><td style="width: 25.0000%;">25% 가격 혜택 + 무료 배송</td></tr><tr><td style="width: 25.0000%;">[슈퍼얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개, 코스터 1개</td><td style="width: 25%; text-align: center;">24,000원</td><td style="width: 25.0000%;">20% 가격 혜택</td></tr><tr><td style="width: 25.0000%;">[얼리버드] 와디즈텀블러</td><td style="width: 25.0000%;">텀블러 1개</td><td style="width: 25%; text-align: center;">25,500원</td><td style="width: 25.0000%;">15% 가격 혜택</td></tr></tbody></table><h2>리워드 발송 정보</h2><p>발송 정보는 서포터분들이 궁금해하는 항목이므로 아래 내용을 상세히 작성해 주세요.</p><ul><li>발송 방법: 택배, 우편, 이메일 발송 등</li><li>발송 일정: ○월 ○일 발송 시작</li><li>도서/산간 지역 발송 안내<br>- 도서/산간 지역 배송 가능 여부:<br>- 추가 배송비:<br>- 지불 방법: 다음 세 가지 방법 중 한 가지를 선택해 주세요.<br>1) 펀딩 시 후원금 더하기에 추가 배송비를 입력해 주세요.<br>2) 펀딩 시 도서/산간 추가 배송비 리워드를 함께 펀딩해 주세요. (단, 펀딩 준비 &gt; 리워드 설계 화면에서 추가 배송비 리워드 별도 생성 필수)<br>3) 최종 결제일 이후 서포터분들에게 개별 안내해 드리는 계좌로 추가 배송비를 직접 입금해 주세요.</li><li>배송 시 포장 상태:</li><li>문의 채널과 문의 가능한 시간: 카카오 채널, 메이커에게 문의하기, 메일, 전화번호 등</li><li>수령 후 보관 시 유의 사항:</li></ul><p><br></p> <p></p><p><br></p>, start_date=Wed Jun 09 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 22:06:56,413] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 22:06:56,414] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 22:09:44,726] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 22:09:44,727] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 22:09:53,667] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 22:09:53,668] FundingController.java:188 - funding = Funding(funding_no=17, category_code=null, rate_plan_code=null, writer_no=0, title=null, now_amount=0, goal_amount=0, readCount=0, content=<p>asdgasg</p>, early_content=<p>gdsag</p>, start_date=Wed Jun 09 00:00:00 KST 2021, d_day=null, reg_date=null, phone=null)
+DEBUG:[2021-06-09 22:09:53,672] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 22:09:53,673] FundingController.java:93 - ready1Funding
+INFO :[2021-06-09 22:12:22,347] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 22:12:25,287] ContextLoader.java:306 - Root WebApplicationContext initialized in 2936 ms
+INFO :[2021-06-09 22:12:25,375] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 22:12:28,185] FrameworkServlet.java:546 - Completed initialization in 2810 ms
+DEBUG:[2021-06-09 22:12:28,280] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready1Funding ===================
+DEBUG:[2021-06-09 22:12:28,301] FundingController.java:93 - ready1Funding
+DEBUG:[2021-06-09 22:12:31,378] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 22:12:31,379] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 22:12:42,531] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+INFO :[2021-06-09 22:15:07,365] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 22:15:10,473] ContextLoader.java:306 - Root WebApplicationContext initialized in 3105 ms
+INFO :[2021-06-09 22:15:10,561] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 22:15:13,900] FrameworkServlet.java:546 - Completed initialization in 3339 ms
+DEBUG:[2021-06-09 22:15:13,998] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 22:15:14,000] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 22:15:14,023] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 22:15:23,481] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 22:16:05,966] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+DEBUG:[2021-06-09 22:16:09,569] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 22:16:09,569] FundingController.java:177 - ready4Story
+INFO :[2021-06-09 22:16:19,422] ContextLoader.java:270 - Root WebApplicationContext: initialization started
+INFO :[2021-06-09 22:16:22,307] ContextLoader.java:306 - Root WebApplicationContext initialized in 2881 ms
+INFO :[2021-06-09 22:16:22,394] FrameworkServlet.java:524 - Initializing Servlet 'appServlet'
+INFO :[2021-06-09 22:16:25,172] FrameworkServlet.java:546 - Completed initialization in 2777 ms
+DEBUG:[2021-06-09 22:16:25,270] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready4Story ===================
+DEBUG:[2021-06-09 22:16:25,290] FundingController.java:177 - ready4Story
+DEBUG:[2021-06-09 22:16:40,321] LoggerInterceptor.java:21 - =================== /interact-funding/funding/saveStory ===================
+ERROR:[2021-06-09 22:16:44,865] Slf4jSpyLogDelegator.java:120 - 1. PreparedStatement.execute() update
+			funding
+		 SET content = ?,
+			
+			
+			early_content = ?,
+			
+			
+			start_date = to_timestamp('06/18/2021 00:00:00.000', 'mm/dd/yyyy hh24:mi:ss.ff3') 	
+		where
+			funding_no = 17
+java.sql.SQLException: Missing IN or OUT parameter at index:: 1
+	at oracle.jdbc.driver.OraclePreparedStatement.processCompletedBindRow(OraclePreparedStatement.java:1821)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3571)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3677)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveStory(FundingDaoImpl.java:48)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveStory(FundingServiceImpl.java:59)
+	at com.kh.interactFunding.funding.controller.FundingController.saveStory(FundingController.java:186)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR:[2021-06-09 22:16:44,867] Slf4jSpyLogDelegator.java:139 - 1. PreparedStatement.execute() FAILED! update
+			funding
+		 SET content = ?,
+			
+			
+			early_content = ?,
+			
+			
+			start_date = to_timestamp('06/18/2021 00:00:00.000', 'mm/dd/yyyy hh24:mi:ss.ff3') 	
+		where
+			funding_no = 17 {FAILED after 0 msec}
+java.sql.SQLException: Missing IN or OUT parameter at index:: 1
+	at oracle.jdbc.driver.OraclePreparedStatement.processCompletedBindRow(OraclePreparedStatement.java:1821)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3571)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3677)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1374)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:46)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	at com.sun.proxy.$Proxy15.update(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:294)
+	at com.kh.interactFunding.funding.model.dao.FundingDaoImpl.saveStory(FundingDaoImpl.java:48)
+	at com.kh.interactFunding.funding.model.service.FundingServiceImpl.saveStory(FundingServiceImpl.java:59)
+	at com.kh.interactFunding.funding.controller.FundingController.saveStory(FundingController.java:186)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1427)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+DEBUG:[2021-06-09 22:18:13,478] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:18:13,478] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:43:58,726] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:43:58,726] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:46:09,259] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:46:09,260] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:52:01,357] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:52:01,358] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:55:24,432] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:55:24,432] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:55:48,889] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:55:48,890] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:56:24,557] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:56:24,557] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:56:43,695] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:56:43,695] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:57:29,906] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:57:29,907] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:58:04,967] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:58:04,967] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:58:25,135] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:58:25,136] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 22:59:29,871] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 22:59:29,871] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:05:17,970] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:05:17,971] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:06:07,151] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:06:07,152] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:06:33,884] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:06:33,885] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:07:22,138] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:07:22,139] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:08:19,033] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:08:19,034] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:08:52,201] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:08:52,202] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:09:38,460] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:09:38,460] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:09:56,099] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:09:56,100] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:11:14,226] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:11:14,226] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:12:09,161] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:12:09,161] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:12:23,298] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:12:23,299] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:12:36,516] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:12:36,516] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:16:17,179] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:16:17,180] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:16:57,380] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:16:57,380] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:18:51,617] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:18:51,617] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:19:28,200] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:19:28,200] FundingController.java:195 - ready5Reward
+WARN :[2021-06-09 23:19:43,934] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+DEBUG:[2021-06-09 23:22:27,524] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:22:27,524] FundingController.java:195 - ready5Reward
+WARN :[2021-06-09 23:22:42,110] AbstractHandlerExceptionResolver.java:197 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+DEBUG:[2021-06-09 23:23:21,114] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:23:21,114] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:24:09,591] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:24:09,592] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:24:51,379] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:24:51,379] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:25:32,149] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:25:32,149] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:28:50,710] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:28:50,710] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:29:05,594] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:29:05,595] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:36:25,101] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:36:25,101] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:37:23,740] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:37:23,740] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:37:26,793] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:37:26,793] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:37:33,832] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:37:33,833] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:37:38,003] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:37:38,003] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:38:09,873] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:38:09,873] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:38:50,336] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:38:50,337] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:39:27,331] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:39:27,331] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:46:31,090] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:46:31,090] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:46:32,823] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:46:32,823] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:46:34,084] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:46:34,084] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:46:35,164] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:46:35,164] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:46:35,854] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:46:35,855] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:46:36,667] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:46:36,667] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:46:37,271] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:46:37,271] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:46:54,302] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:46:54,302] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:47:28,654] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:47:28,654] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:47:30,564] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:47:30,564] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:50:07,254] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:50:07,254] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:53:10,649] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:53:10,649] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:53:21,949] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:53:21,950] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:54:42,398] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:54:42,398] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:55:11,529] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:55:11,529] FundingController.java:195 - ready5Reward
+DEBUG:[2021-06-09 23:55:24,022] LoggerInterceptor.java:21 - =================== /interact-funding/funding/ready5Reward ===================
+DEBUG:[2021-06-09 23:55:24,022] FundingController.java:195 - ready5Reward

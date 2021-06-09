@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -80,7 +81,7 @@ public class MenuController {
 		try {
 			log.debug("type={},taste={}",type,taste);
 			
-			String menuUrl ="http://localhost:10000/springboot/menus/"+"/"+type+"/"+taste;
+			String menuUrl ="http://localhost:10000/springboot/menus/"+type+"/"+taste;
 			URL url = new URL(menuUrl);
 			InputStream is = url.openStream();
 			BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"));
@@ -126,10 +127,11 @@ public class MenuController {
 	//?post 방식이 되는지 모르겠다...어떻게 하지??
 	
 	@PostMapping(
-			value ="/insertMenu",
+			value ="/insertMenu.do",
 			produces = MediaType.APPLICATION_JSON_UTF8_VALUE
 			)
-	public String insertMenu(@RequestParam Object menu) throws Exception{
+	@ResponseBody
+	public String insertMenu(@RequestBody Object menu) throws Exception{
 		try {
 			log.debug("menu={}",menu);
 			String menuUrl = "http://localhost:10000/springboot/menu";
@@ -145,7 +147,7 @@ public class MenuController {
 			log.debug("응답 json ={}",sb.toString());
 			return sb.toString();
 		} catch (Exception e) {
-			log.error("menu one 조회 오류!",e);
+			log.error("menu 등록 오류!",e);
 			throw e;
 		} 
 	}
