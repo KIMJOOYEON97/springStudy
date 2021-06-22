@@ -103,5 +103,12 @@ from
     attachment a
         on b.no = a.board_no
 where b.no= 61;
+
+
     
+
+select 
+    *
+from
+    attachment;
     

@@ -6,20 +6,41 @@
 <jsp:include page="/WEB-INF/views/common/header.jsp">
 	<jsp:param value="Stomp" name="title"/>
 </jsp:include>
+<<<<<<< HEAD
+<c:if test="${loginMember.id eq 'admin'}"> 
+<div class="input-group mb-3">
+	<select id="stomp-url" class="form-select mr-1">
+		<option value="">전송url</option>
+		<option value="/admin/notice">/admin/notice</option>
+		<option value="/admin/notice/abcde">/admin/notice/abcde</option>
+	</select>
+=======
 	<select id="stomp-url" class="form-select mr-1">
 		<option value="">전송url</option>
 		<option value="/topic/a">/topic/a</option>
 		<option value="/app/a">/app/a</option>
 	</select>
 	<div class="input-group mb-3">
+>>>>>>> 7a04f908a0464ec4af7e667610d5efcd93df2a19
     <input type="text" id="message" class="form-control" placeholder="Message">
     <div class="input-group-append" style="padding: 0px;">
         <button id="sendBtn" class="btn btn-outline-secondary" type="button">Send</button>
     </div>
+<<<<<<< HEAD
+</div>
+<button id="ajaxBtn" class="btn btn-outline-primary" type="button">비동기요청</button>
+</c:if>
+<div>
+	<ul class="list-group list-group-flush" id="data"></ul>
+</div>
+
+
+=======
     </div>
     <div>
         <ul class="list-group list-group-flush" id="data"></ul>
     </div>
+>>>>>>> 7a04f908a0464ec4af7e667610d5efcd93df2a19
 <!-- sockjs-client js 추가  -->    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.2/sockjs.js" integrity="sha512-3/5zbNJKTwZiPFIUPL9Q6woFGvOluvYq2/rJ+C4sZUTXKhVoY3e6mSTf5RJG01lYX3atqeslmWTsxCXb147x2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- stomp.js 추가  -->
@@ -28,6 +49,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js" integrity="sha512-pBSlhNUvB+td6sjW1zmR6L7c7kVWR4octUPl4tfHmzO63424nxta8aLmficEcAAswQmRqTiToi63AazDurj/Sg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.12.1/polyfill.js" integrity="sha512-wixq/u8vbwoVM6yCmTHUNszWudaPpwf8pKxfG1NPUOBXTh1ntBx8sr/dJSbGTlZUqpcoPjaUmU1hlBB3oJlzFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/babel">
+<<<<<<< HEAD
+$("#ajaxBtn").click(() => {
+	
+	$.ajax({
+		url:"${pageContext.request.contextPath}/ws/someRequest.do",
+		success(data){
+			console.log(data);
+		},
+		error:console.log
+	});
+
+});
+
+
+=======
+>>>>>>> 7a04f908a0464ec4af7e667610d5efcd93df2a19
 /**
  * sock.js
  *
@@ -46,6 +83,38 @@ stompClient.connect({}, frame =>{
 	console.log("stomp connected : ",frame);
 
 	//구독
+<<<<<<< HEAD
+	//전체에게 공지
+	stompClient.subscribe("/notice", frame =>{
+		console.log("message from /notice : ",frame);
+		displayMessage(frame);
+	});
+	//특정 사용자에게 공지
+	stompClient.subscribe("/notice/${loginMember.id}", frame =>{
+		console.log("message from /notice/${loginMember.id} : ",frame);
+		displayMessage(frame);
+	});
+});
+
+const displayMessage = ({body}) => {
+	//1. json -> js object
+	let obj = JSON.parse(body);
+	console.log(obj);
+
+	//2. 내용만 구조분해할당
+	const {message} = obj;
+	let html = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+	  <strong>\${message}</strong>
+	  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>`;
+
+	//3. #content prepend(자식요소로 맨앞에 추가하기)
+	const $content = $("#content");
+	$content.prepend(html);
+};
+=======
 	stompClient.subscribe("/topic/a", message =>{
 		console.log("message from /topic/a : ",message);
 	});
@@ -54,6 +123,7 @@ stompClient.connect({}, frame =>{
 	});
 });
 
+>>>>>>> 7a04f908a0464ec4af7e667610d5efcd93df2a19
 
 const sendMessage = () => {
 	const url = $("#stomp-url").val();
@@ -63,8 +133,23 @@ const sendMessage = () => {
 	}
 
 	const $message = $("#message");
+<<<<<<< HEAD
+	const msg ={
+		from : "${loginMember.id}",
+		to : url === "/admin/notice" ? "all" :"abcde",
+		message : $message.val(),
+		type : "NOTICE",
+		time : Date.now()
+	};
+
+	console.log(msg);	
+
+	if($message.val()){
+		stompClient.send(url, {}, JSON.stringify(msg));
+=======
 	if($message.val()){
 		stompClient.send(url, {}, $message.val());
+>>>>>>> 7a04f908a0464ec4af7e667610d5efcd93df2a19
 		//message 초기화
 		$message.val("").focus();
 	}
