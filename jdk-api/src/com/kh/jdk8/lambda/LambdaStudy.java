@@ -1,15 +1,25 @@
 package com.kh.jdk8.lambda;
 
+import java.net.Inet4Address;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 /**
  * 
@@ -31,7 +41,121 @@ public class LambdaStudy {
 		//study.test1();
 		//study.test2();
 		//study.test3();
-		study.test4();
+		//study.test4();
+		//study.test5();
+		study.test6();
+	}
+	
+	//익명클래스 사용
+	private void test6() {
+		List<Integer> list = new ArrayList<Integer>() {
+			{
+				for(int i =1; i <=10; i++)
+					add(i);
+			}
+		};
+//		System.out.println(list);
+		//매 요소를 대상으로 람다식이 호출될 것임  
+		//Consumer
+		//모든 요소 순회
+		list.forEach(n -> {
+			System.out.println(n);
+		});
+		list.forEach(n ->System.out.println(n));
+		list.forEach(System.out::println);
+		System.out.println();
+		
+		//특정 요소 제거
+		//Predicate
+		list.removeIf(n -> n % 2 == 0); //짝수이면 제거해주세요 
+		list.forEach(System.out::println);
+		System.out.println();
+		
+		//요소 대체
+		//UnaryOperator : 매개변수와 리턴타입이 같은 경우 Function대신 사용 가능
+		list.replaceAll(n -> n*100);
+		list.forEach(System.out::println);
+		System.out.println();
+	}
+	
+	/**
+	 * 메소드 참조 Method Reference
+	 * 람다식을 더욱 간결히 표현한 문법.
+	 * 
+	 * $.ajax({
+	 * 		success(data){},
+	 * 		error:console.log => 이런 느낌
+	 * })
+	 * 
+	 * 베이스가 되는 함수형 인터페이스에 따라 동일한 메소드참조도 기능이 달라질 수 있다.
+	 * 
+	 * 1. static: Integer.parseInt("123") -> Integer::parseInt
+	 * 2. non-static: "홍길동".equals(name) -> String::equals(두개의 인자를 받아서 처리)  -> String에 있는 equals를 사용하고 싶다
+	 * 3. 특정객체의 메소드: str::equals(한개의 인자를 받아서 처리)
+	 * 4. 생성자참조: new Person() -> Person::news (함수형 인터페이스에 따라 여러 생성자를 호출가능)
+	 * 
+	 * 
+	 */
+	public void test5() {
+		//전달된 값이 그대로 매소드에 전달된 것을 가정하고 있음(전달된 값을 그대로 사용할 경우에만) -> 값전달이 바뀔 경우 메소드 참조 사용불가
+//		Consumer<String> printer = s -> System.out.println(s);
+		Consumer<String> printer = System.out::println;
+		printer.accept("홍길동");
+		
+		//1.static
+//		Function<String, Integer> intParser = s -> Integer.parseInt(s);
+		Function<String, Integer> intParser =  Integer::parseInt;
+		int num = intParser.apply("1234567");
+		System.out.println("num = "+num);
+		
+		
+		//2.non-static
+		//문자열 길이를 구하는 람다식 - 메소드참조
+//		Function<String, Integer> strLength = s -> s.length(); //String하나를 받아서 int를 리턴
+		Function<String, Integer> strLength = String::length;
+		String name ="아라비카 골드";
+		System.out.println(name.length());
+		System.out.println(strLength.apply(name));
+		
+		//equals
+		//BiFunction매개변수가 2개인 function
+//		BiFunction<String,String,Boolean> strEquals = (s1,s2) -> s1.equals(s2);
+		BiFunction<String,String,Boolean> strEquals = String::equals;
+		System.out.println(strEquals.apply(name, "아라비카 골드")); //true
+		System.out.println(strEquals.apply(name, "ㅋㅋㅋㅋ"));		//false
+		
+		
+		//3. 특정객체 기분 메소드참조
+		String title = "소나기";
+//		Predicate<String> equalToTitle = s -> title.equals(s);
+		Predicate<String> equalToTitle = title::equals;
+		System.out.println(equalToTitle.test("소나기"));	//true
+		System.out.println(equalToTitle.test("장마"));	//false
+		
+		
+		//4. 생성자메소드 참조
+//		Supplier<Person> personConstr = () -> new Person();
+		Supplier<Person> personConstr = Person::new;
+		System.out.println(personConstr.get());
+		
+//		BiFunction<String,Integer,Person> personConstr2 = (name_,age) -> new Person(name_,age);
+		BiFunction<String,Integer,Person> personConstr2 = Person::new;
+		System.out.println(personConstr2.apply("홍길동", 35));
+		System.out.println(personConstr2.apply("신사임당", 47));
+		
+		//이름은 입력받고 나이는 입력받지 않아도 듸는 경우
+		Function<String,Person> personConstr3 = Person::new;
+		System.out.println(personConstr3.apply("김영희"));
+	}
+	
+	@Data
+	@AllArgsConstructor
+	@NoArgsConstructor
+	@RequiredArgsConstructor  //@NonNull이 붙은 속성을 가지고 생성자 하나 만들어준다
+	class Person{
+		@NonNull //이름은 입력받을때 나이는 입력받지 않아도 되는 경우
+		private String name;
+		private int age;
 	}
 	
 	/**
@@ -39,7 +163,7 @@ public class LambdaStudy {
 	 * - 제네릭을 사용해서 람다식 작성 타입에 매개변수나 리턴타입이 결정되도록함.
 	 * 
 	 * 1. java.lang.Runnable				: 매개변수 없음 |리턴값 없음 	| run():void
-	 * 2. java.util.function.Supplier<R> 	: 매개변수 없음 |리턴 R    	| get():R     R은 제네릭 의미
+	 * 2. java.util.function.Supplier<R> 	: 매개변수 없음 |리턴 R    	| get():R     R은 제네릭 의미 R로 쓰면 어떤 것이든 사용 가능 
 	 * 3. java.util.function.Consumer<T> 	: 매개변수 T	|리턴값 없음 	| accept(T):void
 	 * 4. java.util.function.Function<T,R>	: 매개변수 T 	|리턴 R	   	| apply(T):R
 	 * 5. java.util.function.Predicate<T>	: 매개변수 T	|리턴 boolean	| test(T):boolean
@@ -53,6 +177,12 @@ public class LambdaStudy {
 		};
 		nowTime.accept(new Date());
 		
+		Runnable displayNow = () -> {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			System.out.println(sdf.format(new Date()));
+		};
+		displayNow.run();
+		
 		
 		//로또(1~45사이의 중복없는 난수 set) 생성 람다식
 		Supplier<Integer> rand1to45 =() -> new Random().nextInt(45)+1;
@@ -60,18 +190,33 @@ public class LambdaStudy {
 		Set<Integer> roto = new TreeSet<Integer>();
 		while(roto.size() < 6) {
 			roto.add(rand1to45.get());
-		}
-		
+		}		
 		System.out.println(roto);
+		
+		Supplier<Set<Integer>> lotoPublisher  =() ->{ 
+			Set<Integer> lotto = new TreeSet<Integer>();
+			while(lotto.size() < 6) {
+				lotto.add(new Random().nextInt(45)+1);
+			}
+			return lotto;
+		};		
+		for(int i = 0; i <5; i++) {
+			Set<Integer> lotto = lotoPublisher.get();
+			System.out.println(i + 1 + ":"+ lotto);
+		}
+
 		
 		
 		//환율계산기 : 원화 입력시 달러값을 리턴
 		//1달러는 1100원이다
-//		Function<Integer, Integer> wontodollar = won -> won / 1100;
-//		Scanner sc = new Scanner(System.in);
-//		System.out.println("원화를 입력하세요");
-//		int won = Integer.valueOf(sc.next());
-//		System.out.printf("현재 [%d]원은 [%.2f]달러 입니다.",won,wontodollar.apply(won));
+		Function<Integer, Double> wontodollar = won -> {
+			double rate = 1100;
+			return won/rate;
+		};
+		Scanner sc = new Scanner(System.in);
+		System.out.println("원화를 입력하세요");
+		int won = Integer.valueOf(sc.next());
+		System.out.printf("현재 [%d]원은 [%.2f]달러 입니다.",won,wontodollar.apply(won));
 		
 	}
 	
@@ -224,3 +369,4 @@ public class LambdaStudy {
 	}
 	
 }
+
